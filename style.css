@@ -71,7 +71,11 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3, h4, .headline {
+h1,
+h2,
+h3,
+h4,
+.headline {
     font-family: var(--font-headline);
 }
 
@@ -129,11 +133,14 @@ img {
 }
 
 .logo {
+    font-family: "Ubuntu", var(--font-headline);
     font-size: 1.5rem;
     font-weight: 800;
-    color: #f97316;
+    color: #ffffff;
     letter-spacing: -0.025em;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .nav-links {
@@ -210,7 +217,7 @@ img {
 
 @media (min-width: 768px) {
     .hero {
-        padding-top: 6rem;
+        padding-top: 3rem;
         padding-bottom: 8rem;
     }
 }
@@ -400,6 +407,7 @@ img {
     .hero-image-container {
         transform: rotate(2deg);
     }
+
     .hero-image-container:hover {
         transform: rotate(0deg);
     }
@@ -459,29 +467,39 @@ img {
 }
 
 /* Wave Divider */
-.wave-divider {
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+.wave-path-bg {
+    fill: var(--background);
 }
 
-.wave-divider svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 4rem;
+.wave-path-surface {
+    fill: var(--surface-container);
 }
 
-@media (min-width: 768px) {
-    .wave-divider svg {
-        height: 6rem;
+@keyframes waveDividerAnimation {
+    0% {
+        d: path("M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z");
+    }
+
+    50% {
+        d: path("M655.558582,28.4898877 C500.191373,61.6062216 422.833785,83.5422763 266.940085,49.8995879 C112.480383,16.5663637 84.0992497,8.02840272 0,44.7243294 L0,150.727527 L1920,150.727527 L1920,49.8995879 C1580.91676,-34.8808285 1438.10804,73.6768193 1148.0266,38.0019829 C857.945166,2.32714659 810.925791,-4.62644617 655.558582,28.4898877 Z");
+    }
+
+    100% {
+        d: path("M842.322034,38.0019829 C686.954825,71.1183168 623.386282,53.08497 467.492582,19.4422816 C313.032879,-13.8909426 84.0992497,8.02840272 0,44.7243294 L0,150.727527 L1920,150.727527 L1920,76.8685643 C1512.23604,-35.3595639 1568.70222,67.4289432 1278.62078,31.7541069 C988.539347,-3.92072949 997.689243,4.88564905 842.322034,38.0019829 Z");
     }
 }
 
-.wave-path-1 { fill: rgba(255, 183, 131, 0.2); }
-.wave-path-2 { fill: rgba(253, 226, 147, 0.3); }
-.wave-path-bg { fill: var(--background); }
-.wave-path-surface { fill: var(--surface-container); }
+.wavePath {
+    animation: waveDividerAnimation 20s linear infinite alternate;
+}
+
+.dividerTop {
+    transform: translateY(10px);
+}
+
+.dividerBottom {
+    transform: rotate(180deg) translateY(10px)
+}
 
 /* Community Showcase */
 .showcase-section {
@@ -509,18 +527,27 @@ img {
     font-size: 1.125rem;
 }
 
-.showcase-grid, .features-grid {
+.showcase-grid,
+.features-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
 
 @media (min-width: 768px) {
-    .showcase-grid, .features-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .showcase-grid,
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1024px) {
-    .showcase-grid, .features-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .showcase-grid,
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .card {
@@ -530,7 +557,6 @@ img {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
     border: 1px solid transparent;
-    cursor: pointer;
 }
 
 .card:hover {
@@ -547,11 +573,13 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s;
+    filter: brightness(0.5);
+    transition: transform 0.5s, filter 0.5s;
 }
 
 .card:hover .card-image {
     transform: scale(1.1);
+    filter: unset;
 }
 
 .card-body {
@@ -650,24 +678,10 @@ img {
 
 /* Footer */
 .main-footer {
-    background-color: #0c0a09;
+    background: oklch(from #0c0a09 l c h / 0.1);
     border-top: 1px solid #292524;
     position: relative;
     overflow: hidden;
-}
-
-.footer-map-bg {
-    position: absolute;
-    inset: 0;
-    opacity: 0.1;
-    pointer-events: none;
-    mix-blend-mode: overlay;
-}
-
-.footer-map-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .footer-content {

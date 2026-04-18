@@ -1,335 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Miraheze - Free, Ad-Free Wiki Hosting</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Icons -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-    <!-- TopNavBar -->
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="logo">Miraheze</div>
-            <div class="nav-links">
-                <a class="nav-link active" href="#">Features</a>
-                <a class="nav-link" href="#">Wikis</a>
-                <a class="nav-link" href="#">Community</a>
-                <a class="nav-link" href="#">Donate</a>
-                <a class="nav-link" href="#">Support</a>
-            </div>
-            <div class="nav-actions">
-                <button class="btn-login">Log in</button>
-                <button class="btn-create">Create Wiki</button>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Free, Ad-Free <span class="text-highlight">Wiki Hosting</span> for Everyone
-                </h1>
-                <p class="hero-description">
-                    Join a vibrant ecosystem where your community's knowledge takes center stage. No hidden fees,
-                    absolutely no ads. Built for creators, by enthusiasts.
-                </p>
-                <div class="hero-btns">
-                    <button class="btn-hero-primary">
-                        Start Your Wiki Today
-                    </button>
-                    <button class="btn-hero-secondary">
-                        Explore Communities
-                        <span class="material-symbols-outlined">arrow_forward</span>
-                    </button>
-                </div>
-                <div class="hero-stats">
-                    <div class="avatar-group">
-                        <img class="avatar"
-                            alt="close up headshot of a smiling young professional woman"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkJjFdIVTm7Jhe_hD_Go5outYqkBxTUto8cKOKUgiNAE4qnynP3W3X0MC5xvguVCOGYxoyXMoktWdbm6dQV7wyFUiQLhkygnHpNCeYiwKW9PulWGQctJOmXcriM0nTej45UV_Cj124FXWeJcjn2pJZ8bIcQJvF7l_UseQut8rwct7v01R1P-zsY7m1pJUwl3PXyG7JfmCD3AL3EolESa5GrvekLD6tU3dT0uZqwe69tVyfeL52FviTM-b5o8nZnwLRTt3Fh7ucvxw" />
-                        <img class="avatar"
-                            alt="close up headshot of a man with a friendly expression"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoFaL_ksMWBcLmmmOIo6um4fp57vVjPZGEgIJiHC7p2JxpmjAMWle0sTKo_EJIt28LbpQr1gFsvz_H9QnO5J0OMdOKkaR5j7_TrM-RUFUop7Ex9BZayCmc7RU9k82Raqwr3LcpY-7q52veMfSQWyTCGxQblRjitnxfY9pWISNTJMrNmtOmFiGT6VVuZDLQY0IuBMRO0A-AtWYR7nvGDgAnsMWh5qJX3zby4NtVx6ql_OB738-nw3jILoT-xZ-oYO9pKYBXFnFxiYU" />
-                        <img class="avatar"
-                            alt="close up profile shot of a diverse young person smiling"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmj87q5Snidi4FNSBGphY52F_cCLW3ZfaF7vn46hhtIBUTHXznEDutxadVYcKo9BHCM6Wq0yNFxJwh_atiHMBLXgSWEaDa8ohQ9z4HvZINpmV6ecOota9zWLj6hGRSr6UzN3pNepFi_j7hoXCZLh-XQ48krpqxsodXCi0WKfNFINSgzmmSuKldik8sgzxuHqhI93w8aGuzgLB7NOCRkfkYL2Ib2Uth0FA31OqHI52P19aQ_Kx9QKr1opFawEfItIQq52MEUsvLQnw" />
-                    </div>
-                    <p class="stats-text"><span class="stats-count">5,000+</span> active communities</p>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="hero-bg-glow"></div>
-                <div class="hero-image-container">
-                    <img class="hero-image"
-                        alt="A diverse collaborative team of creative professionals working together"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNzlDNwGTjxn6x3Rk-8Ladr9IV9WJWhGWqLGrxAT91QDlOAXpU3t0wtyB-T8JwJYzcXhx1ayUNcsIJK4OBeml0p2m7scczam9tghhxiNzbWtx7RR3jfH4jpi3xSiLfczw-CykQQl5MC-ni8HY9ttCcEjsuLYMOn7c6xdAo7V3llhFYkyS8HdD5Rp3V0KBSVsLSsg_Wr3nzEhYwE-8Tco4YfNSBjJOuUe_y99l5wnmnZXBcke69591HFbDvO0ImP22dwTQ049MpQaE" />
-                </div>
-                <!-- Floating Card -->
-                <div class="floating-card">
-                    <div class="card-icon">
-                        <span class="material-symbols-outlined">groups</span>
-                    </div>
-                    <div>
-                        <p class="card-label">Active Users</p>
-                        <p class="card-value">1.2M+ Monthly</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Wave Divider 1 -->
-    <div class="wave-divider">
-        <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-            <path class="wave-path-1"
-                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
-            </path>
-            <path class="wave-path-2"
-                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z">
-            </path>
-            <path class="wave-path-bg"
-                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z">
-            </path>
-        </svg>
-    </div>
-
-    <!-- Community Showcase -->
-    <section class="showcase-section">
-        <div class="container section-header">
-            <h2 class="section-title">A Home for Every Community</h2>
-            <p class="section-subtitle">
-                Discover knowledge bases across countless topics, crafted by passionate fans and experts.
+---
+layout: default
+---
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Free, Ad-Free <span class="text-highlight">Wiki Hosting</span> for Everyone
+            </h1>
+            <p class="hero-description">
+                Join a vibrant ecosystem where your community's knowledge takes center stage. Focus on what you love
+                and let us take care of the technical details. Built for creators, by enthusiasts.
             </p>
-        </div>
-        <div class="container showcase-grid">
-            <!-- Gaming -->
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <img class="card-image" alt="neon-lit professional gaming setup"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBml009WKbnJFJFcLZxRD7r0Ewff-lkh1TPNvcyaCb2QlFB0WGjVUeuUmfblI3C2ze759FakRLWirZnPUB50Vf4ic6VnPdKMHGcAC54IhwXxffGn-OZXa-cXRgaTnb5F2MeKX-eaOPT6X2o3pt5ThBFG8hWj8CqY5d4s7qPeQfJqNpylMs33_sCayJ1yPxjU0WGqq50Yr98mxY7AxNSCiP8Xt8QGaEAONDZ-vTTiKDjgLqLDruyiEZzyQanGjap6936tg_EyUH7osE" />
-                </div>
-                <div class="card-body">
-                    <div class="card-title-row">
-                        <h3 class="card-title">Gaming</h3>
-                        <span class="badge">4,500+ Wikis</span>
-                    </div>
-                    <p class="card-text">From indie gems to blockbuster RPGs, catalog every quest and item.</p>
-                </div>
-            </div>
-            <!-- TV Shows -->
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <img class="card-image" alt="A modern home cinema environment"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzXTt7PHi8bE1Job4yAQZQD5J3W9DdAXsE2aVprdb4nWdX5Oupvarp5X6Im4DBEtQqEejPvg6z93POeBbpGJ752RCcXo7jXgmCQGeBIKVxKv0LnGxulk6pIzwaqNR3itHE00KzC8DxLv0mCcKzCPGrph7Jk6A768mXgZTchVYokqBI3sXLCcYAFQVmG2V6pI2KdLVhz4bJ1zzjDkbH6sT0g0-Z-mQqzANDeOqjxf31HVvQVyP2ovzcTT59wNpouzOaFUOoeZODsgc" />
-                </div>
-                <div class="card-body">
-                    <div class="card-title-row">
-                        <h3 class="card-title">TV Shows</h3>
-                        <span class="badge">2,200+ Wikis</span>
-                    </div>
-                    <p class="card-text">Deep dive into lore, character arcs, and episode guides for your favorite
-                        series.</p>
-                </div>
-            </div>
-            <!-- Tech -->
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <img class="card-image" alt="complex electronic circuit board"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-opM-x2Frt8xfwgpXaYSfGc3JagMIDg_VpnvkLZiL8Vwuap2raWUjINvkElSlI56jdGE20tE-E1AceJNYrH1mnWbYTe7bG-vwwc2hRmkvc8-U4FFvLBR_RFeZzn-x72jsvmFzD_RTlLfElhGMzWdoQZHcqjSZGdnvQ0yMLra7RXSm3H-DWgv8hMRlBWJQQ56w0z5vabnEh4Qa1pA619tH0q4XpTCdgYSxOwmIcW1dgvo2OTZPKUlzYcG6d_gvOgsPuir-cCpND-U" />
-                </div>
-                <div class="card-body">
-                    <div class="card-title-row">
-                        <h3 class="card-title">Technology</h3>
-                        <span class="badge">1,800+ Wikis</span>
-                    </div>
-                    <p class="card-text">Technical documentation, software guides, and open-source project libraries.
-                    </p>
-                </div>
-            </div>
-            <!-- Anime & Manga -->
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <img class="card-image" alt="collection of colorful manga books on a shelf"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfMM_MwS4f0nPq2m4RiElqp7oleQYz5stJRiC45AjvxyENkISW2Fo9yYtbCMj0urToQJ0XIRMTRBQqfnIKeSSMEuDbct_Cv2zZKVKp2j5kZ54tA7L92A8H8gmQ0zz-gVF0jvc82gE6S-YD-e2XBc09ifqWbG3NlhE78j9-iimdqqXY17glpIRJ-ecMNU54k7UudS7zz5EMtp3vhBBWgHhZEfxgp0ORgzngPM434DMFhtt055RDbdhprPlhVQv6kPIzaNAPFMsVKPE" />
-                </div>
-                <div class="card-body">
-                    <div class="card-title-row">
-                        <h3 class="card-title">Anime</h3>
-                        <span class="badge">3,100+ Wikis</span>
-                    </div>
-                    <p class="card-text">Comprehensive guides for shonen classics, seasonal hits, and hidden gems.</p>
-                </div>
-            </div>
-            <!-- Sports -->
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <img class="card-image" alt="close up of a stadium field with bright lights"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr6PinZlHe3xWVLMwvc3XKBbeU6lyYIadX7KQQQRf9xMBxhmovlT-YzHMPIwoFef_ueG3imFzdBz4suY2X5zXvs97U8k0S1lIMFQcOWMn0nkzbMW0I6YHTnLb5FC9Qt8XAaPxNzEilvtSs0A9dIFwGAzv6u2rAF8eHOOh_d6Ems4iTQOb0TJhfPlU6oueFidcs6jx3NPVWR0PNB9JYfH9f-Ucy4e3qwd_0xkY4v0Ja09cH17LezMyr0Zjq3xyoM921rZIZ1Gfiyag" />
-                </div>
-                <div class="card-body">
-                    <div class="card-title-row">
-                        <h3 class="card-title">Sports</h3>
-                        <span class="badge">1,200+ Wikis</span>
-                    </div>
-                    <p class="card-text">Player stats, team histories, and detailed analysis for fans across the globe.
-                    </p>
-                </div>
-            </div>
-            <!-- Education -->
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <img class="card-image" alt="interior of a classic library with many books"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8cE38_4CtQpRpwphJEqCnYb0mog6shVAd5UxCykIcPpBiBiGiuPw9J1K7QVr6pQfXygVn008mn499yqF87pUu8wQ-4bOdEXWxtEYD5clb_FVwoO12KcQpYqZf2crBFbcvpvJTAZG7GZvEX5Rbfib3n-VFlLikgFs5np6srNNBb7VgfjaRelRuJs2A0otKatrAZkkLKywlDz34zIvDn9RTOo53V1oBvwORM0RFbRc42yOekSqjFrgbtukO_WOZrnVLwBTJD4iDw6Q" />
-                </div>
-                <div class="card-body">
-                    <div class="card-title-row">
-                        <h3 class="card-title">Education</h3>
-                        <span class="badge">900+ Wikis</span>
-                    </div>
-                    <p class="card-text">Academic research, language learning resources, and community study guides.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Wave Divider 2 -->
-    <div class="wave-divider">
-        <svg preserveAspectRatio="none" viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
-            <path class="wave-path-2"
-                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
-            </path>
-            <path class="wave-path-1"
-                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z">
-            </path>
-            <path class="wave-path-surface"
-                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z">
-            </path>
-        </svg>
-    </div>
-
-    <!-- Why Miraheze Section -->
-    <section class="features-section">
-        <div class="container features-header">
-            <h2 class="section-title">Why Miraheze?</h2>
-            <div class="accent-line"></div>
-        </div>
-        <div class="container features-grid">
-            <!-- Ad-free -->
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <span class="material-symbols-outlined">block</span>
-                </div>
-                <h3 class="feature-title">Ad-free</h3>
-                <p class="feature-description">
-                    Everybody hates ads, we do too. None of our wikis feature or will ever feature any ads,
-                    guaranteed.
-                </p>
-            </div>
-            <!-- Configure it freely -->
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <span class="material-symbols-outlined">settings_suggest</span>
-                </div>
-                <h3 class="feature-title">Configure it freely</h3>
-                <p class="feature-description">
-                    Our self-service interface allows administrators to easily configure almost every aspect of
-                    their wiki.
-                </p>
-            </div>
-            <!-- Customizability -->
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <span class="material-symbols-outlined">palette</span>
-                </div>
-                <h3 class="feature-title">Customizability</h3>
-                <p class="feature-description">
-                    Make it feel like home. Choose and configure over 300 extensions and skins to your hearts
-                    content.
-                </p>
-            </div>
-            <!-- Custom domains -->
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <span class="material-symbols-outlined">language</span>
-                </div>
-                <h3 class="feature-title">Custom domains</h3>
-                <p class="feature-description">
-                    Express yourself! All wikis can choose to use a custom domain of their own if they wish, for
-                    free.
-                </p>
-            </div>
-            <!-- Friendly support -->
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <span class="material-symbols-outlined">volunteer_activism</span>
-                </div>
-                <h3 class="feature-title">Friendly support</h3>
-                <p class="feature-description">
-                    Our team of friendly MediaWiki experts is here to help you at every step of the way. Just ask!
-                </p>
-            </div>
-            <!-- VisualEditor support -->
-            <div class="feature-card">
-                <div class="feature-icon-wrapper">
-                    <span class="material-symbols-outlined">edit_square</span>
-                </div>
-                <h3 class="feature-title">VisualEditor support</h3>
-                <p class="feature-description">
-                    While others charge you for setting it up, we support VisualEditor out of the box, for free.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <!-- Map Motif Background Overlay -->
-        <div class="footer-map-bg">
-            <img alt=""
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0lMP_9Xm2pBuLP5Zu8DGiFRU0Cn_eaAjPGiIBYLTBOURpVJjYDORDlzZfcPMhikmy0JXiQdzGYpPESK2DIJAIma-YxcF1OwpvudGOGXRPXHwQ1L31wYjDnqfOlvWOUd5bQm-tVCtMkRb1zR4B79-0dXC-ZXKtkvgxtMYvWdlh1ZXlyML10R-UO90d0oAmAYYLBmW4HsyT6ygCeCQ0Jy-Vpni3NNLUOLk9DSKY25TIWXAA1utzlzsmjdkPA1zwLy_ywg5d1xH1qO0" />
-        </div>
-        <div class="footer-content">
-            <div class="footer-logo-section">
-                <div class="footer-logo">Miraheze</div>
-                <p class="footer-copyright">
-                    Copyright by WikiTide Foundation, Inc. - a 501(c)(3) public charity.
-                </p>
-            </div>
-            <div class="footer-links">
-                <a class="footer-link" href="#">About</a>
-                <a class="footer-link" href="#">Help Center</a>
-                <a class="footer-link" href="#">Privacy Policy</a>
-                <a class="footer-link" href="#">Terms of Use</a>
-                <a class="footer-link" href="#">Content Policy</a>
-            </div>
-            <div class="social-links">
-                <a class="social-btn" href="#" title="Mastodon">
-                    <svg class="social-icon" viewBox="0 0 24 24">
-                        <path
-                            d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.28 8.97.28 12.442v1.21c0 3.472.36 6.029.638 7.315.591 2.591 2.977 4.417 5.578 4.814.453.067 1.308.309 5.288.309h.03c3.98 0 5.696-.242 6.151-.309 2.687-.394 4.954-2.426 5.304-5.004.29-2.14.364-5.223.364-9.143v-1.21c0-3.92-.074-7.003-.364-9.143zM18.8 17.58c0 .546-.442.988-.988.988h-1.976a.988.988 0 01-.988-.988v-4.94c0-.546.442-.988.988-.988h1.976c.546 0 .988.442.988.988v4.94zm-5.928 0c0 .546-.442.988-.988.988H9.908a.988.988 0 01-.988-.988V7.702c0-.546.442-.988.988-.988h1.976c.546 0 .988.442.988.988v9.878zm-5.928 0c0 .546-.442.988-.988.988H3.98a.988.988 0 01-.988-.988v-4.94c0-.546.442-.988.988-.988h1.976c.546 0 .988.442.988.988v4.94z">
-                        </path>
-                    </svg>
+            <div class="hero-btns">
+                <a class="btn-hero-primary" href="https://meta.miraheze.org/wiki/Special:RequestWiki" target="_blank"
+                    rel="noopener noreferrer">
+                    Start Your Wiki Today
+                </a>
+                <a class="btn-hero-secondary" href="https://communities.miraheze.org" target="_blank"
+                    rel="noopener noreferrer">
+                    Explore Communities
+                    <span class="material-symbols-outlined">arrow_forward</span>
                 </a>
             </div>
+            <div class="hero-stats">
+                <div class="avatar-group">
+                    <img class="avatar" alt="Profile picture of a user" src="assets/ProfilePix.png" />
+                    <img class="avatar" alt="Profile picture of a user" src="assets/ProfileSkye.png" />
+                    <img class="avatar" alt="Profile picture of a user" src="assets/ProfilePC.png" />
+                </div>
+                <p class="stats-text"><span class="stats-count">5,000+</span> active communities</p>
+            </div>
         </div>
-    </footer>
-</body>
+        <div class="hero-image-wrapper">
+            <div class="hero-bg-glow"></div>
+            <div class="hero-image-container">
+                <img class="hero-image" alt="Screenshot of Miraheze Meta" src="assets/Miraheze Banner.png" />
+            </div>
+            <!-- Floating Card -->
+            <div class="floating-card">
+                <div class="card-icon">
+                    <span class="material-symbols-outlined">groups</span>
+                </div>
+                <div>
+                    <p class="card-label">Active Users</p>
+                    <p class="card-value">800K+</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-</html>
+<!-- Wave Divider 1 -->
+<div class="dividerTop" aria-hidden="true"><svg class="wave-1hkxOo" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path class="wavePath wave-path-surface"
+            d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z">
+        </path>
+    </svg></div>
+
+<!-- Community Showcase -->
+<section class="showcase-section">
+    <div class="container section-header">
+        <h2 class="section-title">A Home for Every Community</h2>
+        <p class="section-subtitle">
+            Discover knowledge bases across countless topics, crafted by passionate fans and experts.
+        </p>
+    </div>
+    <div class="container showcase-grid">
+        <!-- Gaming -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img class="card-image" alt="neon-lit professional gaming setup" src="assets/Miraheze Banner.png" />
+            </div>
+            <div class="card-body">
+                <div class="card-title-row">
+                    <h3 class="card-title">Gaming</h3>
+                    <span class="badge">67 Wikis</span>
+                </div>
+                <p class="card-text">From indie gems to popular games, with a deep catalog of features and strategies.
+                </p>
+            </div>
+        </div>
+        <!-- TV Shows -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img class="card-image" alt="A modern home cinema environment" src="assets/Miraheze Banner.png" />
+            </div>
+            <div class="card-body">
+                <div class="card-title-row">
+                    <h3 class="card-title">TV Shows</h3>
+                    <span class="badge">67 Wikis</span>
+                </div>
+                <p class="card-text">Deep dive into lore, character arcs, and episode guides for people's favorite
+                    series.</p>
+            </div>
+        </div>
+        <!-- Tech -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img class="card-image" alt="complex electronic circuit board" src="assets/Miraheze Banner.png" />
+            </div>
+            <div class="card-body">
+                <div class="card-title-row">
+                    <h3 class="card-title">Technology</h3>
+                    <span class="badge">67 Wikis</span>
+                </div>
+                <p class="card-text">Technical documentation, software guides, and open-source project libraries.
+                </p>
+            </div>
+        </div>
+        <!-- Anime & Manga -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img class="card-image" alt="collection of colorful manga books on a shelf"
+                    src="assets/Miraheze Banner.png" />
+            </div>
+            <div class="card-body">
+                <div class="card-title-row">
+                    <h3 class="card-title">Anime</h3>
+                    <span class="badge">67 Wikis</span>
+                </div>
+                <p class="card-text">Comprehensive guides for shonen classics, seasonal hits, and hidden gems.</p>
+            </div>
+        </div>
+        <!-- Sports -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img class="card-image" alt="close up of a stadium field with bright lights"
+                    src="assets/Miraheze Banner.png" />
+            </div>
+            <div class="card-body">
+                <div class="card-title-row">
+                    <h3 class="card-title">Sports</h3>
+                    <span class="badge">67 Wikis</span>
+                </div>
+                <p class="card-text">Player stats, team histories, and detailed analysis for fans across the globe.
+                </p>
+            </div>
+        </div>
+        <!-- Education -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img class="card-image" alt="interior of a classic library with many books"
+                    src="assets/Miraheze Banner.png" />
+            </div>
+            <div class="card-body">
+                <div class="card-title-row">
+                    <h3 class="card-title">Education</h3>
+                    <span class="badge">67 Wikis</span>
+                </div>
+                <p class="card-text">Academic research, language learning resources, and community study guides.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider 2 -->
+<div class="dividerBottom" aria-hidden="true"><svg class="wave-1hkxOo" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path class="wavePath wave-path-surface"
+            d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z">
+        </path>
+    </svg></div>
+
+<!-- Why Miraheze Section -->
+<section class="features-section">
+    <div class="container features-header">
+        <h2 class="section-title">Why Miraheze?</h2>
+        <div class="accent-line"></div>
+    </div>
+    <div class="container features-grid">
+        <!-- Ad-free -->
+        {% include feature_card.html 
+            icon="block" 
+            title="Ad-free" 
+            description="Everybody hates ads, we do too. None of our wikis feature or will ever feature any ads, guaranteed." 
+        %}
+
+        <!-- Configure it freely -->
+        {% include feature_card.html 
+            icon="settings_suggest"
+            title="Configure it freely" 
+            description="Our self-service interface allows administrators to easily configure almost every aspect of their wiki." 
+        %}
+
+        <!-- Customizability -->
+        {% include feature_card.html 
+            icon="palette" 
+            title="Customizability" 
+            description="Make it feel like home. Choose and configure over 300 extensions and skins to your hearts content." 
+        %}
+
+        <!-- Custom domains -->
+        {% include feature_card.html 
+            icon="language" 
+            title="Custom domains" 
+            description="Express yourself! All wikis can choose to use a custom domain of their own if they wish, for free." 
+        %}
+
+        <!-- Friendly support -->
+        {% include feature_card.html 
+            icon="volunteer_activism" 
+            title="Friendly support" 
+            description="Our team of friendly MediaWiki experts is here to help you at every step of the way. Just ask!" 
+        %}
+        
+        <!-- VisualEditor support -->
+        {% include feature_card.html 
+            icon="edit_square" 
+            title="VisualEditor support" 
+            description="While others charge you for setting it up, we support VisualEditor out of the box, for free." 
+        %}
+            </p>
+        </div>
+    </div>
+</section>

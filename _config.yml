@@ -1,0 +1,10 @@
+title: Miraheze
+description: 
+url: "https://whostacking.github.io/buzzy-landing"
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - node_modules/
+  - vendor/
+  - Gemfile.lock
