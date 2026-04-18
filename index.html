@@ -1,0 +1,477 @@
+<html class="dark" lang="en">
+
+<head></head>
+
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Miraheze - Free, Ad-Free Wiki Hosting</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#110b08",
+                        "surface": "#110b08",
+                        "surface-bright": "#221711",
+                        "surface-container-lowest": "#000000",
+                        "surface-container-low": "#1a120d",
+                        "surface-container": "#241913",
+                        "surface-container-high": "#31231b",
+                        "surface-container-highest": "#3e2d24",
+                        "surface-variant": "#493b33",
+                        "surface-dim": "#110b08",
+                        "surface-tint": "#ff9d42",
+                        "on-background": "#f0e6e0",
+                        "on-surface": "#f0e6e0",
+                        "on-surface-variant": "#d3c5bc",
+                        "primary": "#ff9d42",
+                        "on-primary": "#4a2800",
+                        "primary-container": "#6e3c00",
+                        "on-primary-container": "#ffdcc2",
+                        "primary-fixed": "#ffb783",
+                        "primary-fixed-dim": "#ff9d42",
+                        "on-primary-fixed": "#2e1500",
+                        "on-primary-fixed-variant": "#532b00",
+                        "primary-dim": "#ff9d42",
+                        "secondary": "#ffb4a1",
+                        "on-secondary": "#5e1600",
+                        "secondary-container": "#7c2200",
+                        "on-secondary-container": "#ffdbd0",
+                        "tertiary": "#f3c026",
+                        "on-tertiary": "#3e3000",
+                        "tertiary-container": "#584400",
+                        "on-tertiary-container": "#ffe082",
+                        "tertiary-fixed": "#fde293",
+                        "tertiary-fixed-dim": "#f3c026",
+                        "outline": "#9c8f86",
+                        "outline-variant": "#493b33",
+                        "inverse-surface": "#f0e6e0",
+                        "inverse-on-surface": "#332822",
+                        "inverse-primary": "#8b4b00",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+    <!-- TopNavBar -->
+    <header
+        class="bg-white/95 dark:bg-stone-900/95 backdrop-blur-sm shadow-sm border-b border-stone-100 dark:border-stone-800 sticky top-0 z-50">
+        <nav
+            class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto font-['Plus_Jakarta_Sans'] font-medium">
+            <div class="text-2xl font-extrabold text-orange-600 dark:text-orange-500 tracking-tight cursor-pointer">
+                Miraheze</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-orange-600 dark:text-orange-400 border-b-2 border-orange-600 pb-1 hover:text-orange-500 dark:hover:text-orange-300 transition-all"
+                    href="#">Features</a>
+                <a class="text-stone-600 dark:text-stone-400 hover:text-orange-500 dark:hover:text-orange-300 transition-all"
+                    href="#">Wikis</a>
+                <a class="text-stone-600 dark:text-stone-400 hover:text-orange-500 dark:hover:text-orange-300 transition-all"
+                    href="#">Community</a>
+                <a class="text-stone-600 dark:text-stone-400 hover:text-orange-500 dark:hover:text-orange-300 transition-all"
+                    href="#">Donate</a>
+                <a class="text-stone-600 dark:text-stone-400 hover:text-orange-500 dark:hover:text-orange-300 transition-all"
+                    href="#">Support</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden lg:block text-stone-600 dark:text-stone-400 hover:text-orange-500 transition-all active:opacity-80">Log
+                    in</button>
+                <button
+                    class="bg-primary-fixed text-stone-950 px-5 py-2.5 rounded-lg font-bold shadow-md hover:bg-primary-dim transition-all active:opacity-80">Create
+                    Wiki</button>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1 text-center md:text-left z-10">
+                <h1
+                    class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-on-surface leading-tight mb-6 tracking-tight">
+                    Free, Ad-Free <span class="text-primary-fixed">Wiki Hosting</span> for Everyone
+                </h1>
+                <p class="text-xl text-on-surface-variant max-w-xl mb-10 leading-relaxed font-body">
+                    Join a vibrant ecosystem where your community's knowledge takes center stage. No hidden fees,
+                    absolutely no ads. Built for creators, by enthusiasts.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start">
+                    <button
+                        class="w-full sm:w-auto bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-primary-container/20 hover:translate-y-[-2px] transition-all">
+                        Start Your Wiki Today
+                    </button>
+                    <button
+                        class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-lg text-primary hover:bg-primary-container/10 transition-all flex items-center justify-center gap-2">
+                        Explore Communities
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="mt-8 flex items-center justify-center md:justify-start gap-4">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-background"
+                            data-alt="close up headshot of a smiling young professional woman in bright lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkJjFdIVTm7Jhe_hD_Go5outYqkBxTUto8cKOKUgiNAE4qnynP3W3X0MC5xvguVCOGYxoyXMoktWdbm6dQV7wyFUiQLhkygnHpNCeYiwKW9PulWGQctJOmXcriM0nTej45UV_Cj124FXWeJcjn2pJZ8bIcQJvF7l_UseQut8rwct7v01R1P-zsY7m1pJUwl3PXyG7JfmCD3AL3EolESa5GrvekLD6tU3dT0uZqwe69tVyfeL52FviTM-b5o8nZnwLRTt3Fh7ucvxw" />
+                        <img class="w-10 h-10 rounded-full border-2 border-background"
+                            data-alt="close up headshot of a man with a friendly expression outdoors in warm light"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoFaL_ksMWBcLmmmOIo6um4fp57vVjPZGEgIJiHC7p2JxpmjAMWle0sTKo_EJIt28LbpQr1gFsvz_H9QnO5J0OMdOKkaR5j7_TrM-RUFUop7Ex9BZayCmc7RU9k82Raqwr3LcpY-7q52veMfSQWyTCGxQblRjitnxfY9pWISNTJMrNmtOmFiGT6VVuZDLQY0IuBMRO0A-AtWYR7nvGDgAnsMWh5qJX3zby4NtVx6ql_OB738-nw3jILoT-xZ-oYO9pKYBXFnFxiYU" />
+                        <img class="w-10 h-10 rounded-full border-2 border-background"
+                            data-alt="close up profile shot of a diverse young person smiling warmly"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmj87q5Snidi4FNSBGphY52F_cCLW3ZfaF7vn46hhtIBUTHXznEDutxadVYcKo9BHCM6Wq0yNFxJwh_atiHMBLXgSWEaDa8ohQ9z4HvZINpmV6ecOota9zWLj6hGRSr6UzN3pNepFi_j7hoXCZLh-XQ48krpqxsodXCi0WKfNFINSgzmmSuKldik8sgzxuHqhI93w8aGuzgLB7NOCRkfkYL2Ib2Uth0FA31OqHI52P19aQ_Kx9QKr1opFawEfItIQq52MEUsvLQnw" />
+                    </div>
+                    <p class="text-sm text-on-surface-variant"><span class="font-bold text-primary">5,000+</span> active
+                        communities</p>
+                </div>
+            </div>
+            <div class="flex-1 relative">
+                <div
+                    class="absolute -z-10 w-[120%] h-[120%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-tr from-primary-fixed/20 to-tertiary-fixed/10 blur-3xl rounded-full">
+                </div>
+                <div
+                    class="rounded-2xl overflow-hidden shadow-2xl transform md:rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <img class="w-full h-auto object-cover"
+                        data-alt="A diverse collaborative team of creative professionals working together on laptops around a bright modern office table during golden hour."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNzlDNwGTjxn6x3Rk-8Ladr9IV9WJWhGWqLGrxAT91QDlOAXpU3t0wtyB-T8JwJYzcXhx1ayUNcsIJK4OBeml0p2m7scczam9tghhxiNzbWtx7RR3jfH4jpi3xSiLfczw-CykQQl5MC-ni8HY9ttCcEjsuLYMOn7c6xdAo7V3llhFYkyS8HdD5Rp3V0KBSVsLSsg_Wr3nzEhYwE-8Tco4YfNSBjJOuUe_y99l5wnmnZXBcke69591HFbDvO0ImP22dwTQ049MpQaE" />
+                </div>
+                <!-- Floating Card -->
+                <div
+                    class="absolute -bottom-6 -left-6 md:bottom-12 md:-left-12 bg-surface-container-low p-4 rounded-xl shadow-xl flex items-center gap-4 max-w-xs border border-surface-variant">
+                    <div class="bg-primary-container p-2 rounded-lg">
+                        <span class="material-symbols-outlined text-on-primary-container">groups</span>
+                    </div>
+                    <div>
+                        <p class="text-xs text-on-surface-variant font-bold uppercase tracking-wider">Active Users</p>
+                        <p class="text-lg font-bold text-on-surface">1.2M+ Monthly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Wave Divider 1 -->
+    <div class="bg-surface-container w-full overflow-hidden leading-none">
+        <svg class="relative block w-full h-16 md:h-24" preserveaspectratio="none" viewbox="0 0 1200 120"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="fill-primary-fixed/20"
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+            </path>
+            <path class="fill-tertiary-fixed/30"
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z">
+            </path>
+            <path class="fill-background"
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z">
+            </path>
+        </svg>
+    </div>
+    <!-- Community Showcase -->
+    <section class="bg-surface-container pb-24 pt-12">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl font-bold text-on-surface mb-4">A Home for Every Community</h2>
+            <p class="text-on-surface-variant max-w-2xl mx-auto text-lg">
+                Discover knowledge bases across countless topics, crafted by passionate fans and experts.
+            </p>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Gaming -->
+            <div
+                class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-transparent hover:border-primary-fixed/30 cursor-pointer">
+                <div class="h-48 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        data-alt="neon-lit professional gaming setup"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBml009WKbnJFJFcLZxRD7r0Ewff-lkh1TPNvcyaCb2QlFB0WGjVUeuUmfblI3C2ze759FakRLWirZnPUB50Vf4ic6VnPdKMHGcAC54IhwXxffGn-OZXa-cXRgaTnb5F2MeKX-eaOPT6X2o3pt5ThBFG8hWj8CqY5d4s7qPeQfJqNpylMs33_sCayJ1yPxjU0WGqq50Yr98mxY7AxNSCiP8Xt8QGaEAONDZ-vTTiKDjgLqLDruyiEZzyQanGjap6936tg_EyUH7osE" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-on-surface">Gaming</h3>
+                        <span
+                            class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded-full">4,500+
+                            Wikis</span>
+                    </div>
+                    <p class="text-on-surface-variant">From indie gems to blockbuster RPGs, catalog every quest and
+                        item.</p>
+                </div>
+            </div>
+            <!-- TV Shows -->
+            <div
+                class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-transparent hover:border-primary-fixed/30 cursor-pointer">
+                <div class="h-48 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        data-alt="A modern home cinema environment"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzXTt7PHi8bE1Job4yAQZQD5J3W9DdAXsE2aVprdb4nWdX5Oupvarp5X6Im4DBEtQqEejPvg6z93POeBbpGJ752RCcXo7jXgmCQGeBIKVxKv0LnGxulk6pIzwaqNR3itHE00KzC8DxLv0mCcKzCPGrph7Jk6A768mXgZTchVYokqBI3sXLCcYAFQVmG2V6pI2KdLVhz4bJ1zzjDkbH6sT0g0-Z-mQqzANDeOqjxf31HVvQVyP2ovzcTT59wNpouzOaFUOoeZODsgc" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-on-surface">TV Shows</h3>
+                        <span
+                            class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded-full">2,200+
+                            Wikis</span>
+                    </div>
+                    <p class="text-on-surface-variant">Deep dive into lore, character arcs, and episode guides for your
+                        favorite series.</p>
+                </div>
+            </div>
+            <!-- Tech -->
+            <div
+                class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-transparent hover:border-primary-fixed/30 cursor-pointer">
+                <div class="h-48 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        data-alt="complex electronic circuit board"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-opM-x2Frt8xfwgpXaYSfGc3JagMIDg_VpnvkLZiL8Vwuap2raWUjINvkElSlI56jdGE20tE-E1AceJNYrH1mnWbYTe7bG-vwwc2hRmkvc8-U4FFvLBR_RFeZzn-x72jsvmFzD_RTlLfElhGMzWdoQZHcqjSZGdnvQ0yMLra7RXSm3H-DWgv8hMRlBWJQQ56w0z5vabnEh4Qa1pA619tH0q4XpTCdgYSxOwmIcW1dgvo2OTZPKUlzYcG6d_gvOgsPuir-cCpND-U" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-on-surface">Technology</h3>
+                        <span
+                            class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded-full">1,800+
+                            Wikis</span>
+                    </div>
+                    <p class="text-on-surface-variant">Technical documentation, software guides, and open-source project
+                        libraries.</p>
+                </div>
+            </div>
+            <!-- Anime & Manga -->
+            <div
+                class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-transparent hover:border-primary-fixed/30 cursor-pointer">
+                <div class="h-48 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        data-alt="collection of colorful manga books on a shelf"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfMM_MwS4f0nPq2m4RiElqp7oleQYz5stJRiC45AjvxyENkISW2Fo9yYtbCMj0urToQJ0XIRMTRBQqfnIKeSSMEuDbct_Cv2zZKVKp2j5kZ54tA7L92A8H8gmQ0zz-gVF0jvc82gE6S-YD-e2XBc09ifqWbG3NlhE78j9-iimdqqXY17glpIRJ-ecMNU54k7UudS7zz5EMtp3vhBBWgHhZEfxgp0ORgzngPM434DMFhtt055RDbdhprPlhVQv6kPIzaNAPFMsVKPE" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-on-surface">Anime</h3>
+                        <span
+                            class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded-full">3,100+
+                            Wikis</span>
+                    </div>
+                    <p class="text-on-surface-variant">Comprehensive guides for shonen classics, seasonal hits, and
+                        hidden gems.</p>
+                </div>
+            </div>
+            <!-- Sports -->
+            <div
+                class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-transparent hover:border-primary-fixed/30 cursor-pointer">
+                <div class="h-48 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        data-alt="close up of a stadium field with bright lights"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr6PinZlHe3xWVLMwvc3XKBbeU6lyYIadX7KQQQRf9xMBxhmovlT-YzHMPIwoFef_ueG3imFzdBz4suY2X5zXvs97U8k0S1lIMFQcOWMn0nkzbMW0I6YHTnLb5FC9Qt8XAaPxNzEilvtSs0A9dIFwGAzv6u2rAF8eHOOh_d6Ems4iTQOb0TJhfPlU6oueFidcs6jx3NPVWR0PNB9JYfH9f-Ucy4e3qwd_0xkY4v0Ja09cH17LezMyr0Zjq3xyoM921rZIZ1Gfiyag" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-on-surface">Sports</h3>
+                        <span
+                            class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded-full">1,200+
+                            Wikis</span>
+                    </div>
+                    <p class="text-on-surface-variant">Player stats, team histories, and detailed analysis for fans
+                        across the globe.</p>
+                </div>
+            </div>
+            <!-- Education -->
+            <div
+                class="group bg-surface-container-low rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-transparent hover:border-primary-fixed/30 cursor-pointer">
+                <div class="h-48 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        data-alt="interior of a classic library with many books"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8cE38_4CtQpRpwphJEqCnYb0mog6shVAd5UxCykIcPpBiBiGiuPw9J1K7QVr6pQfXygVn008mn499yqF87pUu8wQ-4bOdEXWxtEYD5clb_FVwoO12KcQpYqZf2crBFbcvpvJTAZG7GZvEX5Rbfib3n-VFlLikgFs5np6srNNBb7VgfjaRelRuJs2A0otKatrAZkkLKywlDz34zIvDn9RTOo53V1oBvwORM0RFbRc42yOekSqjFrgbtukO_WOZrnVLwBTJD4iDw6Q" />
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-2xl font-bold text-on-surface">Education</h3>
+                        <span
+                            class="bg-primary-container text-on-primary-container text-xs font-bold px-2 py-1 rounded-full">900+
+                            Wikis</span>
+                    </div>
+                    <p class="text-on-surface-variant">Academic research, language learning resources, and community
+                        study guides.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Wave Divider 2 -->
+    <div class="bg-surface w-full overflow-hidden leading-none">
+        <svg class="relative block w-full h-16 md:h-24" preserveaspectratio="none" viewbox="0 0 1200 120"
+            xmlns="http://www.w3.org/2000/svg">
+            <path class="fill-tertiary-fixed/30"
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+            </path>
+            <path class="fill-primary-fixed/20"
+                d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z">
+            </path>
+            <path class="fill-surface-container"
+                d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z">
+            </path>
+        </svg>
+    </div>
+    <!-- Why Miraheze Section -->
+    <section class="pb-24 pt-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-on-surface mb-6 tracking-tight">Why Miraheze?</h2>
+                <div class="h-1.5 w-24 bg-primary-fixed mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Ad-free -->
+                <div
+                    class="bg-surface-container-low p-8 rounded-2xl border border-surface-variant hover:border-primary-fixed transition-colors group shadow-sm hover:shadow-md">
+                    <div
+                        class="w-14 h-14 bg-primary-container text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-fixed group-hover:text-stone-950 transition-all">
+                        <span class="material-symbols-outlined text-3xl">block</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-on-surface">Ad-free</h3>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Everybody hates ads, we do too. None of our wikis feature or will ever feature any ads,
+                        guaranteed.
+                    </p>
+                </div>
+                <!-- Configure it freely -->
+                <div
+                    class="bg-surface-container-low p-8 rounded-2xl border border-surface-variant hover:border-primary-fixed transition-colors group shadow-sm hover:shadow-md">
+                    <div
+                        class="w-14 h-14 bg-primary-container text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-fixed group-hover:text-stone-950 transition-all">
+                        <span class="material-symbols-outlined text-3xl">settings_suggest</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-on-surface">Configure it freely</h3>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Our self-service interface allows administrators to easily configure almost every aspect of
+                        their wiki.
+                    </p>
+                </div>
+                <!-- Customizability -->
+                <div
+                    class="bg-surface-container-low p-8 rounded-2xl border border-surface-variant hover:border-primary-fixed transition-colors group shadow-sm hover:shadow-md">
+                    <div
+                        class="w-14 h-14 bg-primary-container text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-fixed group-hover:text-stone-950 transition-all">
+                        <span class="material-symbols-outlined text-3xl">palette</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-on-surface">Customizability</h3>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Make it feel like home. Choose and configure over 300 extensions and skins to your hearts
+                        content.
+                    </p>
+                </div>
+                <!-- Custom domains -->
+                <div
+                    class="bg-surface-container-low p-8 rounded-2xl border border-surface-variant hover:border-primary-fixed transition-colors group shadow-sm hover:shadow-md">
+                    <div
+                        class="w-14 h-14 bg-primary-container text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-fixed group-hover:text-stone-950 transition-all">
+                        <span class="material-symbols-outlined text-3xl">language</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-on-surface">Custom domains</h3>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Express yourself! All wikis can choose to use a custom domain of their own if they wish, for
+                        free.
+                    </p>
+                </div>
+                <!-- Friendly support -->
+                <div
+                    class="bg-surface-container-low p-8 rounded-2xl border border-surface-variant hover:border-primary-fixed transition-colors group shadow-sm hover:shadow-md">
+                    <div
+                        class="w-14 h-14 bg-primary-container text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-fixed group-hover:text-stone-950 transition-all">
+                        <span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-on-surface">Friendly support</h3>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Our team of friendly MediaWiki experts is here to help you at every step of the way. Just ask!
+                    </p>
+                </div>
+                <!-- VisualEditor support -->
+                <div
+                    class="bg-surface-container-low p-8 rounded-2xl border border-surface-variant hover:border-primary-fixed transition-colors group shadow-sm hover:shadow-md">
+                    <div
+                        class="w-14 h-14 bg-primary-container text-primary rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-fixed group-hover:text-stone-950 transition-all">
+                        <span class="material-symbols-outlined text-3xl">edit_square</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-on-surface">VisualEditor support</h3>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        While others charge you for setting it up, we support VisualEditor out of the box, for free.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer
+        class="bg-stone-50 dark:bg-stone-950 full-width border-t border-stone-200 dark:border-stone-800 relative overflow-hidden">
+        <!-- Map Motif Background Overlay -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-multiply dark:mix-blend-overlay">
+            <img alt="" class="w-full h-full object-cover" data-alt="a monochromatic minimalist topographic map"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0lMP_9Xm2pBuLP5Zu8DGiFRU0Cn_eaAjPGiIBYLTBOURpVJjYDORDlzZfcPMhikmy0JXiQdzGYpPESK2DIJAIma-YxcF1OwpvudGOGXRPXHwQ1L31wYjDnqfOlvWOUd5bQm-tVCtMkRb1zR4B79-0dXC-ZXKtkvgxtMYvWdlh1ZXlyML10R-UO90d0oAmAYYLBmW4HsyT6ygCeCQ0Jy-Vpni3NNLUOLk9DSKY25TIWXAA1utzlzsmjdkPA1zwLy_ywg5d1xH1qO0" />
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10 font-['Manrope'] text-sm">
+            <div class="flex flex-col items-center md:items-start">
+                <div class="text-xl font-bold text-stone-800 dark:text-stone-200 mb-4">Miraheze</div>
+                <p class="text-stone-500 dark:text-stone-400 text-center md:text-left max-w-xs">
+                    Copyright by WikiTide Foundation, Inc. - a 501(c)(3) public charity.
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                <a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer"
+                    href="#">About</a>
+                <a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer"
+                    href="#">Help Center</a>
+                <a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer"
+                    href="#">Privacy Policy</a>
+                <a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer"
+                    href="#">Terms of Use</a>
+                <a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer"
+                    href="#">Content Policy</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a class="w-8 h-8 rounded-full bg-stone-200 dark:bg-stone-800 flex items-center justify-center text-stone-600 dark:text-stone-400 hover:bg-orange-600 hover:text-white transition-all cursor-pointer"
+                    href="#" title="Mastodon">
+                    <svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+                        <path
+                            d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.28 8.97.28 12.442v1.21c0 3.472.36 6.029.638 7.315.591 2.591 2.977 4.417 5.578 4.814.453.067 1.308.309 5.288.309h.03c3.98 0 5.696-.242 6.151-.309 2.687-.394 4.954-2.426 5.304-5.004.29-2.14.364-5.223.364-9.143v-1.21c0-3.92-.074-7.003-.364-9.143zM18.8 17.58c0 .546-.442.988-.988.988h-1.976a.988.988 0 01-.988-.988v-4.94c0-.546.442-.988.988-.988h1.976c.546 0 .988.442.988.988v4.94zm-5.928 0c0 .546-.442.988-.988.988H9.908a.988.988 0 01-.988-.988V7.702c0-.546.442-.988.988-.988h1.976c.546 0 .988.442.988.988v9.878zm-5.928 0c0 .546-.442.988-.988.988H3.98a.988.988 0 01-.988-.988v-4.94c0-.546.442-.988.988-.988h1.976c.546 0 .988.442.988.988v4.94z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
