@@ -15,11 +15,11 @@ layout: default
             <div class="hero-btns">
                 <a class="btn-hero-primary" href="https://meta.miraheze.org/wiki/Special:RequestWiki" target="_blank"
                     rel="noopener noreferrer">
-                    Start Your Wiki Today
+                    Start your wiki today
                 </a>
                 <a class="btn-hero-secondary" href="https://communities.miraheze.org" target="_blank"
                     rel="noopener noreferrer">
-                    Explore Communities
+                    Explore communities
                     <span class="material-symbols-outlined">arrow_forward</span>
                 </a>
             </div>
@@ -51,169 +51,134 @@ layout: default
     </div>
 </section>
 
-<!-- Wave Divider 1 -->
-<div class="dividerTop" aria-hidden="true"><svg class="wave-1hkxOo" version="1.1" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 100" preserveAspectRatio="none">
-        <path class="wavePath wave-path-surface"
-            d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z">
-        </path>
-    </svg></div>
-
+{% include wave_top.html %}
 <!-- Community Showcase -->
 <section class="showcase-section">
     <div class="container section-header">
-        <h2 class="section-title">A Home for Every Community</h2>
+        <h2 class="section-title">Everything you need to build</h2>
+        <!-- <div class="accent-line"></div> -->
+    </div>
+    <div class="container features-grid">
+        <!-- Ad-free -->
+        {% include feature_card.html
+        icon="block"
+        title="Ad-free"
+        description="Everybody hates ads, we do too. None of our wikis feature or will ever feature any ads,
+        guaranteed."
+        %}
+
+        <!-- Configure it freely -->
+        {% include feature_card.html
+        icon="settings_suggest"
+        title="Configure it freely"
+        description="Our self-service interface allows administrators to easily configure almost every aspect of their
+        wiki."
+        %}
+
+        <!-- Customizability -->
+        {% include feature_card.html
+        icon="palette"
+        title="Customizability"
+        description="Make it feel like home. Choose and configure over 300 extensions and skins to your hearts content."
+        %}
+
+        <!-- Custom domains -->
+        {% include feature_card.html
+        icon="language"
+        title="Custom domains"
+        description="Express yourself! All wikis can choose to use a custom domain of their own if they wish, for free."
+        %}
+
+        <!-- Friendly support -->
+        {% include feature_card.html
+        icon="volunteer_activism"
+        title="Friendly support"
+        description="Our team of friendly MediaWiki experts is here to help you at every step of the way. Just ask!"
+        %}
+
+        <!-- VisualEditor support -->
+        {% include feature_card.html
+        icon="edit_square"
+        title="VisualEditor support"
+        description="While others charge you for setting it up, we support VisualEditor out of the box, for free."
+        %}
+        </p>
+    </div>
+</section>
+{% include wave_bottom.html %}
+
+<!-- Why Miraheze Section -->
+<section class="features-section">
+    <div class="container section-header">
+        <h2 class="section-title">A home for every community</h2>
         <p class="section-subtitle">
             Discover knowledge bases across countless topics, crafted by passionate fans and experts.
         </p>
     </div>
     <div class="container showcase-grid">
         <!-- Gaming -->
-        <div class="card">
-            <div class="card-image-wrapper">
-                <img class="card-image" alt="neon-lit professional gaming setup" src="assets/Miraheze Banner.png" />
-            </div>
-            <div class="card-body">
-                <div class="card-title-row">
-                    <h3 class="card-title">Gaming</h3>
-                    <span class="badge">67 Wikis</span>
-                </div>
-                <p class="card-text">From indie gems to popular games, with a deep catalog of features and strategies.
-                </p>
-            </div>
-        </div>
+        {% include showcase_grid.html 
+            image="assets/Miraheze Banner.png"
+            title="Gaming"
+            badge="67 Wikis"
+            description="From indie gems to popular games, with a deep catalog of features and strategies."
+        %}
+        
         <!-- TV Shows -->
-        <div class="card">
-            <div class="card-image-wrapper">
-                <img class="card-image" alt="A modern home cinema environment" src="assets/Miraheze Banner.png" />
-            </div>
-            <div class="card-body">
-                <div class="card-title-row">
-                    <h3 class="card-title">TV Shows</h3>
-                    <span class="badge">67 Wikis</span>
-                </div>
-                <p class="card-text">Deep dive into lore, character arcs, and episode guides for people's favorite
-                    series.</p>
-            </div>
-        </div>
+        {% include showcase_grid.html 
+            image="assets/Miraheze Banner.png"
+            title="TV Shows"
+            badge="67 Wikis"
+            description="Deep dive into lore, character arcs, and episode guides for people's favorite series."
+        %}
+
         <!-- Tech -->
-        <div class="card">
-            <div class="card-image-wrapper">
-                <img class="card-image" alt="complex electronic circuit board" src="assets/Miraheze Banner.png" />
-            </div>
-            <div class="card-body">
-                <div class="card-title-row">
-                    <h3 class="card-title">Technology</h3>
-                    <span class="badge">67 Wikis</span>
-                </div>
-                <p class="card-text">Technical documentation, software guides, and open-source project libraries.
-                </p>
-            </div>
-        </div>
+        {% include showcase_grid.html 
+            image="assets/Miraheze Banner.png"
+            title="Technology"
+            badge="67 Wikis"
+            description="Technical documentation, software guides, and open-source project libraries."
+        %}
+
         <!-- Anime & Manga -->
-        <div class="card">
-            <div class="card-image-wrapper">
-                <img class="card-image" alt="collection of colorful manga books on a shelf"
-                    src="assets/Miraheze Banner.png" />
-            </div>
-            <div class="card-body">
-                <div class="card-title-row">
-                    <h3 class="card-title">Anime</h3>
-                    <span class="badge">67 Wikis</span>
-                </div>
-                <p class="card-text">Comprehensive guides for shonen classics, seasonal hits, and hidden gems.</p>
-            </div>
-        </div>
+        {% include showcase_grid.html 
+            image="assets/Miraheze Banner.png"
+            title="Anime"
+            badge="67 Wikis"
+            description="Comprehensive guides for shonen classics, seasonal hits, and hidden gems."
+        %}
+
         <!-- Sports -->
-        <div class="card">
-            <div class="card-image-wrapper">
-                <img class="card-image" alt="close up of a stadium field with bright lights"
-                    src="assets/Miraheze Banner.png" />
-            </div>
-            <div class="card-body">
-                <div class="card-title-row">
-                    <h3 class="card-title">Sports</h3>
-                    <span class="badge">67 Wikis</span>
-                </div>
-                <p class="card-text">Player stats, team histories, and detailed analysis for fans across the globe.
-                </p>
-            </div>
-        </div>
+        {% include showcase_grid.html 
+            image="assets/Miraheze Banner.png"
+            title="Sports"
+            badge="67 Wikis"
+            description="Player stats, team histories, and detailed analysis for fans across the globe."
+        %}
+
         <!-- Education -->
-        <div class="card">
-            <div class="card-image-wrapper">
-                <img class="card-image" alt="interior of a classic library with many books"
-                    src="assets/Miraheze Banner.png" />
-            </div>
-            <div class="card-body">
-                <div class="card-title-row">
-                    <h3 class="card-title">Education</h3>
-                    <span class="badge">67 Wikis</span>
-                </div>
-                <p class="card-text">Academic research, language learning resources, and community study guides.
-                </p>
-            </div>
-        </div>
+         {% include showcase_grid.html 
+            image="assets/Miraheze Banner.png"
+            title="Education"
+            badge="67 Wikis"
+            description="Academic research, language learning resources, and community study guides."
+        %}
     </div>
 </section>
 
-<!-- Wave Divider 2 -->
-<div class="dividerBottom" aria-hidden="true"><svg class="wave-1hkxOo" version="1.1" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 100" preserveAspectRatio="none">
-        <path class="wavePath wave-path-surface"
-            d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z">
-        </path>
-    </svg></div>
-
-<!-- Why Miraheze Section -->
-<section class="features-section">
-    <div class="container features-header">
-        <h2 class="section-title">Why Miraheze?</h2>
-        <div class="accent-line"></div>
-    </div>
-    <div class="container features-grid">
-        <!-- Ad-free -->
-        {% include feature_card.html 
-            icon="block" 
-            title="Ad-free" 
-            description="Everybody hates ads, we do too. None of our wikis feature or will ever feature any ads, guaranteed." 
-        %}
-
-        <!-- Configure it freely -->
-        {% include feature_card.html 
-            icon="settings_suggest"
-            title="Configure it freely" 
-            description="Our self-service interface allows administrators to easily configure almost every aspect of their wiki." 
-        %}
-
-        <!-- Customizability -->
-        {% include feature_card.html 
-            icon="palette" 
-            title="Customizability" 
-            description="Make it feel like home. Choose and configure over 300 extensions and skins to your hearts content." 
-        %}
-
-        <!-- Custom domains -->
-        {% include feature_card.html 
-            icon="language" 
-            title="Custom domains" 
-            description="Express yourself! All wikis can choose to use a custom domain of their own if they wish, for free." 
-        %}
-
-        <!-- Friendly support -->
-        {% include feature_card.html 
-            icon="volunteer_activism" 
-            title="Friendly support" 
-            description="Our team of friendly MediaWiki experts is here to help you at every step of the way. Just ask!" 
-        %}
-        
-        <!-- VisualEditor support -->
-        {% include feature_card.html 
-            icon="edit_square" 
-            title="VisualEditor support" 
-            description="While others charge you for setting it up, we support VisualEditor out of the box, for free." 
-        %}
-            </p>
-        </div>
+{% include wave_top.html %}
+<section class="showcase-section">
+    <div class="container section-header">
+        <h2 class="section-title">Powered by the people</h2>
+        <p class="section-subtitle">
+            Miraheze is a non-profit entity. We are funded entirely by generous donations from users like you, which is why we never need to show ads.
+        </p>
+        <div style="margin: 2rem">
+                <a class="btn-hero-primary" href="https://meta.miraheze.org/wiki/Special:RequestWiki" target="_blank"
+                    rel="noopener noreferrer">
+                    <span class="material-symbols-outlined">volunteer_activism</span>
+                    Donate today
+                </a>
+            </div>
     </div>
 </section>
