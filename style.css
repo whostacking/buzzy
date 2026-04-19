@@ -354,6 +354,17 @@ img {
     }
 }
 
+@media (max-width: 768px) {
+    .hero-stats {
+        display: none;
+    }
+
+    .btn-hero-primary {
+        width: 100%;
+        display: block;
+    }
+}
+
 .avatar-group {
     display: flex;
 }
@@ -504,7 +515,7 @@ img {
 }
 
 /* Community Showcase */
-.showcase-section {
+.features-section {
     background-color: var(--surface-container);
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -515,11 +526,19 @@ img {
     margin-bottom: 3rem;
 }
 
+.showcase-section .section-header {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .section-title {
     font-size: 2.25rem;
     font-weight: 700;
     color: var(--on-surface);
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 .section-subtitle {
@@ -559,6 +578,10 @@ img {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     padding: 3rem 2rem;
     transition: all 0.3s;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
 }
 
 .card-image-wrapper {
@@ -606,7 +629,7 @@ img {
 }
 
 /* Features Section */
-.features-section {
+.showcase-section {
     padding-top: 6rem;
     padding-bottom: 6rem;
     background-color: var(--surface);
@@ -624,6 +647,7 @@ img {
     background-color: var(--surface-container-high);
     padding: 2rem;
     border-radius: 3rem;
+    transition: transform 0.2s;
 
     &:nth-child(odd) {
         background-color: oklch(from var(--surface-container-high) l c var(--hue));
@@ -654,6 +678,10 @@ img {
 
     &:nth-child(5) {
         --hue: 116;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
     }
 }
 
@@ -745,6 +773,12 @@ img {
     text-align: left;
 }
 
+@media (max-width: 768px) {
+    .footer-copyright {
+        text-align: center;
+    }
+}
+
 .footer-links {
     display: flex;
     flex-wrap: wrap;
@@ -783,10 +817,39 @@ img {
 .social-btn:hover {
     background-color: #ea580c;
     color: #ffffff;
+
+    &.mastodon {
+        background-color: #6364FF;
+    }
+
+    &.bluesky {
+        background-color: #1185FE;
+    }
+
+    &.facebook {
+        background-color: #0866FF;
+    }
+
+    &.twitter, &.github {
+        background-color: #181717;
+    }
+
+    &.discord {
+        background-color: #5865F2;
+    }
 }
 
 .social-icon {
     width: 1rem;
     height: 1rem;
     fill: currentColor;
+    filter: invert(1);
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.social-btn:hover .social-icon {
+    opacity: 1;
 }

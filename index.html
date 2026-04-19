@@ -9,7 +9,7 @@ layout: default
                 Free, Ad-Free <span class="text-highlight">Wiki Hosting</span> for Everyone
             </h1>
             <p class="hero-description">
-                Join a vibrant ecosystem where your community's knowledge takes center stage. Focus on what you love
+                Focus on what you love
                 and let us take care of the technical details. Built for creators, by enthusiasts.
             </p>
             <div class="hero-btns">
@@ -53,7 +53,7 @@ layout: default
 
 {% include wave_top.html %}
 <!-- Community Showcase -->
-<section class="showcase-section">
+<section class="features-section">
     <div class="container section-header">
         <h2 class="section-title">Everything you need to build</h2>
         <!-- <div class="accent-line"></div> -->
@@ -108,77 +108,86 @@ layout: default
 {% include wave_bottom.html %}
 
 <!-- Why Miraheze Section -->
-<section class="features-section">
+<section class="showcase-section">
     <div class="container section-header">
-        <h2 class="section-title">A home for every community</h2>
-        <p class="section-subtitle">
-            Discover knowledge bases across countless topics, crafted by passionate fans and experts.
-        </p>
+        <div>
+            <h2 class="section-title">A home for every community</h2>
+            <p class="section-subtitle">
+                Discover knowledge bases across countless topics, crafted by passionate fans and experts.
+            </p>
+        </div>
+        <div>
+            <a class="btn-hero-primary" href="https://meta.miraheze.org/wiki/Special:WikiDiscover" target="_blank"
+                rel="noopener noreferrer">
+                View directory
+            </a>
+        </div>
     </div>
     <div class="container showcase-grid">
         <!-- Gaming -->
-        {% include showcase_grid.html 
-            image="assets/Miraheze Banner.png"
-            title="Gaming"
-            badge="67 Wikis"
-            description="From indie gems to popular games, with a deep catalog of features and strategies."
+        {% include showcase_grid.html
+        image="assets/Miraheze Banner.png"
+        title="Gaming"
+        description="From indie gems to popular games, with a deep catalog of features and strategies."
+        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=gaming"
         %}
-        
+
         <!-- TV Shows -->
-        {% include showcase_grid.html 
-            image="assets/Miraheze Banner.png"
-            title="TV Shows"
-            badge="67 Wikis"
-            description="Deep dive into lore, character arcs, and episode guides for people's favorite series."
+        {% include showcase_grid.html
+        image="assets/Miraheze Banner.png"
+        title="TV Shows"
+        description="Deep dive into lore, character arcs, and episode guides for people's favorite series."
+        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=fandom"
         %}
 
         <!-- Tech -->
-        {% include showcase_grid.html 
-            image="assets/Miraheze Banner.png"
-            title="Technology"
-            badge="67 Wikis"
-            description="Technical documentation, software guides, and open-source project libraries."
+        {% include showcase_grid.html
+        image="assets/Miraheze Banner.png"
+        title="Technology"
+        description="Technical documentation, software guides, and open-source project libraries."
+        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=electronics"
         %}
 
-        <!-- Anime & Manga -->
-        {% include showcase_grid.html 
-            image="assets/Miraheze Banner.png"
-            title="Anime"
-            badge="67 Wikis"
-            description="Comprehensive guides for shonen classics, seasonal hits, and hidden gems."
+        <!-- Music -->
+        {% include showcase_grid.html
+        image="assets/Miraheze Banner.png"
+        title="Music"
+        description="Learn more about artists' and their discographies."
+        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=music"
         %}
 
         <!-- Sports -->
-        {% include showcase_grid.html 
-            image="assets/Miraheze Banner.png"
-            title="Sports"
-            badge="67 Wikis"
-            description="Player stats, team histories, and detailed analysis for fans across the globe."
+        {% include showcase_grid.html
+        image="assets/Miraheze Banner.png"
+        title="Sports"
+        description="Player stats, team histories, and detailed analysis for fans across the globe."
+        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=sports"
         %}
 
         <!-- Education -->
-         {% include showcase_grid.html 
-            image="assets/Miraheze Banner.png"
-            title="Education"
-            badge="67 Wikis"
-            description="Academic research, language learning resources, and community study guides."
+        {% include showcase_grid.html
+        image="assets/Miraheze Banner.png"
+        title="Education"
+        description="Academic research, language learning resources, and community study guides."
+        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=education"
         %}
     </div>
 </section>
 
 {% include wave_top.html %}
-<section class="showcase-section">
+<section class="features-section">
     <div class="container section-header">
         <h2 class="section-title">Powered by the people</h2>
         <p class="section-subtitle">
-            Miraheze is a non-profit entity. We are funded entirely by generous donations from users like you, which is why we never need to show ads.
+            Miraheze is a non-profit entity. We are funded entirely by generous donations from users like you, which is
+            why we never need to show ads.
         </p>
         <div style="margin: 2rem">
-                <a class="btn-hero-primary" href="https://meta.miraheze.org/wiki/Special:RequestWiki" target="_blank"
-                    rel="noopener noreferrer">
-                    <span class="material-symbols-outlined">volunteer_activism</span>
-                    Donate today
-                </a>
-            </div>
+            <a class="btn-hero-primary" href="https://meta.miraheze.org/wiki/Special:RequestWiki" target="_blank"
+                rel="noopener noreferrer">
+                <span class="material-symbols-outlined">volunteer_activism</span>
+                Donate today
+            </a>
+        </div>
     </div>
 </section>
