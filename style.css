@@ -230,6 +230,12 @@ img {
     }
 }
 
+@media (min-width: 1440px) {
+    .hero {
+        padding-top: 0!important;
+    }
+}
+
 .hero-container {
     display: flex;
     flex-direction: column;
