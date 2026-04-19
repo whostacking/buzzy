@@ -665,7 +665,7 @@ img {
     background-color: var(--surface-container-high);
     padding: 2rem;
     border-radius: 3rem;
-    transition: transform 0.2s;
+    /* transition: transform 0.2s; */
 
     &:nth-child(odd) {
         background-color: oklch(from var(--surface-container-high) l c var(--hue));
@@ -698,9 +698,9 @@ img {
         --hue: 116;
     }
 
-    &:hover {
+    /* &:hover {
         transform: translateY(-5px);
-    }
+    } */
 }
 
 .feature-icon-wrapper {
