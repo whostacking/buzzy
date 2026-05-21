@@ -98,7 +98,9 @@ img {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 1rem 1.5rem;
+    padding: 0.3rem 1.5rem;
+    height: 56px;
+    max-height: 56px;
     max-width: 1280px;
     margin: 0 auto;
     font-family: var(--font-headline);
@@ -132,6 +134,7 @@ img {
     padding: 0.625rem 1.25rem;
     border-bottom: 2px solid transparent;
     border-radius: 3rem;
+    will-change: transform, background-color, color;
 }
 
 .nav-link:hover {
@@ -182,6 +185,15 @@ img {
     }
 }
 
+@keyframes bouncebutton {
+    0%, 100% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.02, 1);
+    }
+}
+
 .btn-page {
     background-color: var(--primary-soft);
     padding: 1rem 2.25rem;
@@ -190,6 +202,11 @@ img {
     transition: all 0.2s;
     font-size: 1.25rem;
     display: inline-block;
+
+    &:hover {
+        background-color: var(--primary-dim);
+        animation: bouncebutton 0.3s ease-in-out forwards;
+    }
 }
 
 /* Hero Section */
@@ -198,11 +215,12 @@ img {
     padding-bottom: 6rem;
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 @media (min-width: 768px) {
     .hero {
-        padding-top: 2rem;
+        padding-top: 3rem;
         padding-bottom: 8rem;
     }
 }
@@ -304,12 +322,28 @@ img {
     border-radius: var(--radius-xl);
     font-weight: 700;
     font-size: 1.125rem;
-    box-shadow: 0 20px 25px -5px rgba(110, 60, 0, 0.2);
-    transition: all 0.2s;
-}
+    transition: all 0.25s;
+    position: relative;
 
-.btn-hero-primary:hover {
-    transform: translateY(-2px);
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(116deg, transparent 10%, rgba(255, 255, 255, 0.07) 10%, rgba(255, 255, 255, 0.07) 15%, transparent 15%, transparent 20%, rgba(255, 255, 255, 0.07) 20%, rgba(255, 255, 255, 0.07) 22.5%, transparent 22.5%);
+        z-index: -1;
+        opacity: 0;
+        transition: 0.3s opacity;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        background: var(--primary-dim);
+        box-shadow: 0 20px 25px -5px rgba(110, 60, 0, 0.2);
+
+        &::before {
+            opacity: 1;
+        }
+    }
 }
 
 .btn-hero-secondary {
