@@ -1,0 +1,206 @@
+---
+layout: default
+permalink: /discover
+body_class: discover 
+---
+
+<style>
+.page-discover .main-header {
+    margin-bottom: 2rem;
+}
+
+.sun {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+
+    z-index: 5;
+    opacity: 0.3;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* SINGLE OUTER ORBIT */
+
+.discover-orbiting {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+}
+
+.orbit {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+    /* border: 2px solid rgba(0,0,0,0.18); */
+
+    animation: orbit-spin 40s linear infinite;
+    opacity: 0.15;
+}
+
+.planet {
+    --radius: 300px;
+    --size: 72px;
+
+    position: absolute;
+
+    width: var(--size);
+    height: var(--size);
+
+    top: 50%;
+    left: 50%;
+
+    margin: calc(var(--size) / -2);
+
+    /* AUTO ANGLE */
+    --angle: calc(
+        (360deg / var(--total)) * var(--i)
+    );
+
+    transform:
+        rotate(var(--angle))
+        translateX(var(--radius))
+        rotate(calc(var(--angle) * -1));
+
+    animation: keep-upright 40s linear infinite;
+}
+
+@keyframes orbit-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes keep-upright {
+    from {
+        transform:
+            rotate(var(--angle))
+            translateX(var(--radius))
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(calc(var(--angle) + 360deg))
+            translateX(var(--radius))
+            rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+
+.discover-landing {
+    display: grid;
+
+    > * {
+        grid-area: 1 / 1;
+    }
+
+    .discover-orbiting {
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .discover-container {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+</style>
+
+<!-- Hero Section -->
+<section class="discover-landing">
+    <div class="discover-orbiting">
+        <div class="sun">
+            <img src="assets/Miraheze-Logo.svg" />
+        </div>
+
+        <div class="orbit" style="--total: 12;">
+
+            <div class="planet" style="--i:0;">
+                <img src="assets/Miraheze-Logo.svg">
+            </div>
+
+            <div class="planet" style="--i:1;">
+                <img src="assets/CommunityBucket.png">
+            </div>
+
+            <div class="planet" style="--i:2;">
+                <img src="assets/CommunityFisch.png">
+            </div>
+
+            <div class="planet" style="--i:3;">
+                <img src="assets/CommunityBattleCats.png">
+            </div>
+
+            <div class="planet" style="--i:4;">
+                <img src="assets/CommunityBandori.png">
+            </div>
+
+            <div class="planet" style="--i:5;">
+                <img src="assets/CommunityDreamsphere.png">
+            </div>
+
+            <div class="planet" style="--i:6;">
+                <img src="assets/CommunityCI.png">
+            </div>
+
+            <div class="planet" style="--i:7;">
+                <img src="assets/CommunitySekaipedia.png">
+            </div>
+
+            <div class="planet" style="--i:8;">
+                <img src="assets/CommunityRainWorld.png">
+            </div>
+
+            <div class="planet" style="--i:9;">
+                <img src="assets/CommunityPizzaTower.png">
+            </div>
+
+            <div class="planet" style="--i:10;">
+                <img src="assets/CommunityArsenal.png">
+            </div>
+
+            <div class="planet" style="--i:11;">
+                <img src="assets/Community2b2t.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container discover-container">
+            <h1 class="hero-title">
+                Discover <span class="text-highlight">thousands</span> of wikis<br>by the community
+            </h1>
+            <p class="hero-description">
+                Miraheze hosts a wide variety of wikis, whether it's for gaming, entertainment, education, or niche hobbies.
+            </p>
+    </div>
+</section>

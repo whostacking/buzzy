@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="page-{{ page.body_class | default: 'mp' }}">
     <!-- TopNavBar -->
     {% include header.html %}
     {{content}}

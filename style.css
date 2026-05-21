@@ -363,6 +363,7 @@ img {
     height: 2.5rem;
     border-radius: var(--radius-full);
     border: 2px solid var(--background);
+    background: var(--background);
     margin-left: -0.5rem;
 }
 
@@ -683,8 +684,9 @@ img {
 }
 
 .feature-card {
-    background-color: oklch(from var(--surface-container-high) l c h / 0.8);
-    backdrop-filter: blur(10px);
+    background: var(--surface-container-high);
+    /* background-color: oklch(from var(--surface-container-high) l c h / 0.8);
+    backdrop-filter: blur(10px); */
     padding: 2rem;
     border-radius: 3rem;
     /* transition: transform 0.2s; */
