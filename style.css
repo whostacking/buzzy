@@ -151,36 +151,27 @@ img {
 
 .btn-login {
     display: none;
-    color: var(--on-surface-variant);
-    transition: all 0.2s;
 }
 
 @media (min-width: 1024px) {
     .btn-login {
         display: block;
+        margin-right: -10px;
     }
 }
 
-.btn-login:hover {
-    color: #f97316;
-}
-
 .btn-create {
-    /* background-color: var(--primary);
-    color: #0c0a09; */
+    background-color: oklch(from var(--primary-soft) l c h / 0.5);
     padding: 0.625rem 1.25rem;
-    border: 0.5px solid var(--on-surface);
     border-radius: 3rem;
     font-weight: 700;
     transition: all 0.2s;
-}
 
-.btn-create:hover {
-    background-color: var(--primary-dim);
-}
+    &:hover {
+        background-color: var(--primary-dim);
+    }
 
-@media (max-width: 768px) {
-    .btn-create {
+    @media (max-width: 768px) {
         display: none;
     }
 }
@@ -769,10 +760,27 @@ img {
 
 /* Footer */
 .main-footer {
-    background: var(--surface-container);
+    /* background: var(--surface-container); */
     /* border-top: 1px solid #292524; */
     position: relative;
     overflow: hidden;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+    }
+
+    &::after {
+        background: url(assets/hexagon.svg) repeat;
+        background-size: 80px auto;
+        filter: invert(1);
+        mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.01) 30%, rgba(0, 0, 0, 0.01) 80%, transparent);
+    }
+
+    &::before {
+        background: var(--surface-container);
+    }
 }
 
 .footer-content {
