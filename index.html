@@ -25,9 +25,9 @@ layout: default
             </div>
             <div class="hero-stats">
                 <div class="avatar-group">
-                    <img class="avatar" alt="Profile picture of a user" src="assets/ProfilePix.png" />
-                    <img class="avatar" alt="Profile picture of a user" src="assets/ProfileSkye.png" />
-                    <img class="avatar" alt="Profile picture of a user" src="assets/ProfilePC.png" />
+                    <img class="avatar" alt="Profile picture of a user" src="assets/CommunityBattleCats.png" />
+                    <img class="avatar" alt="Profile picture of a user" src="assets/CommunityBucket.png" />
+                    <img class="avatar" alt="Profile picture of a user" src="assets/CommunityFisch.png" />
                 </div>
                 <p class="stats-text"><span class="stats-count">5,000+</span> active communities</p>
             </div>
@@ -35,7 +35,9 @@ layout: default
         <div class="hero-image-wrapper">
             <div class="hero-bg-glow"></div>
             <div class="hero-image-container">
-                <img class="hero-image" alt="Screenshot of Miraheze Meta" src="assets/Meta Square screenshot.png" />
+                <a href="https://fischipedia.org" target="_blank" rel="noopener noreferrer">
+                    <img class="hero-image" alt="Screenshot of Fischipedia" src="assets/fischipedia.org_wiki_Fisch_Wiki.png" />
+                </a>
             </div>
             <!-- Floating Card -->
             <!-- <div class="floating-card">
@@ -51,139 +53,145 @@ layout: default
     </div>
 </section>
 
-{% include wave_top.html %}
 <!-- Community Showcase -->
-<section class="features-section">
-    <div class="container section-header">
-        <h2 class="section-title">Everything you need to build</h2>
-        <!-- <div class="accent-line"></div> -->
+<section class="features-section section">
+    <div class="playful-blob-container">
+        <div class="playful-blob blob-squircle"></div>
     </div>
-    <div class="container features-grid">
-        <!-- Ad-free -->
-        {% include feature_card.html
-        icon="block"
-        title="Ad-free"
-        description="Everybody hates ads, we do too. None of our wikis feature or will ever feature any ads,
-        guaranteed."
-        %}
+    <div class="container-wrapper">
+        <div class="container section-header">
+            <h2 class="section-title">Everything you need to build</h2>
+            <!-- <div class="accent-line"></div> -->
+        </div>
+        <div class="container features-grid">
+            <!-- Ad-free -->
+            {% include feature_card.html
+            icon="block"
+            title="Ad-free"
+            description="Everybody hates ads, we do too. None of our wikis feature or will ever feature any ads,
+            guaranteed."
+            %}
 
-        <!-- Configure it freely -->
-        {% include feature_card.html
-        icon="settings_suggest"
-        title="Configure it freely"
-        description="Our self-service interface allows administrators to easily configure almost every aspect of their
-        wiki."
-        %}
+            <!-- Configure it freely -->
+            {% include feature_card.html
+            icon="settings_suggest"
+            title="Configure it freely"
+            description="Our self-service interface allows administrators to easily configure almost every aspect of their
+            wiki."
+            %}
 
-        <!-- Customizability -->
-        {% include feature_card.html
-        icon="palette"
-        title="Customizability"
-        description="Make it feel like home. Choose and configure over 300 extensions and skins to your hearts content."
-        %}
+            <!-- Customizability -->
+            {% include feature_card.html
+            icon="palette"
+            title="Customizability"
+            description="Make it feel like home. Choose and configure over 300 extensions and skins to your hearts content."
+            %}
 
-        <!-- Custom domains -->
-        {% include feature_card.html
-        icon="language"
-        title="Custom domains"
-        description="Express yourself! All wikis can choose to use a custom domain of their own if they wish, for free."
-        %}
+            <!-- Custom domains -->
+            {% include feature_card.html
+            icon="language"
+            title="Custom domains"
+            description="Express yourself! All wikis can choose to use a custom domain of their own if they wish, for free."
+            %}
 
-        <!-- Friendly support -->
-        {% include feature_card.html
-        icon="volunteer_activism"
-        title="Friendly support"
-        description="Our team of friendly MediaWiki experts is here to help you at every step of the way. Just ask!"
-        %}
+            <!-- Friendly support -->
+            {% include feature_card.html
+            icon="volunteer_activism"
+            title="Friendly support"
+            description="Our team of friendly MediaWiki experts is here to help you at every step of the way. Just ask!"
+            %}
 
-        <!-- VisualEditor support -->
-        {% include feature_card.html
-        icon="edit_square"
-        title="VisualEditor support"
-        description="While others charge you for setting it up, we support VisualEditor out of the box, for free."
-        %}
-        </p>
-    </div>
-</section>
-{% include wave_bottom.html %}
-
-<!-- Why Miraheze Section -->
-<section class="showcase-section">
-    <div class="container section-header">
-        <div>
-            <h2 class="section-title">A home for every community</h2>
-            <p class="section-subtitle">
-                Discover knowledge bases across countless topics, crafted by passionate fans and experts.
+            <!-- VisualEditor support -->
+            {% include feature_card.html
+            icon="edit_square"
+            title="VisualEditor support"
+            description="While others charge you for setting it up, we support VisualEditor out of the box, for free."
+            %}
             </p>
         </div>
-        <div>
-            <a class="btn-hero-primary" href="https://communities.miraheze.org" target="_blank"
-                rel="noopener noreferrer">
-                View directory
-            </a>
-        </div>
-    </div>
-    <div class="container showcase-grid">
-        <!-- Gaming -->
-        {% include showcase_grid.html
-        image="assets/Miraheze Banner.png"
-        title="Gaming"
-        description="From indie gems to popular games, with a deep catalog of features and strategies."
-        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=gaming"
-        %}
-
-        <!-- TV Shows -->
-        {% include showcase_grid.html
-        image="assets/Miraheze Banner.png"
-        title="TV Shows"
-        description="Deep dive into lore, character arcs, and episode guides for people's favorite series."
-        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=fandom"
-        %}
-
-        <!-- Tech -->
-        {% include showcase_grid.html
-        image="assets/Miraheze Banner.png"
-        title="Technology"
-        description="Technical documentation, software guides, and open-source project libraries."
-        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=electronics"
-        %}
-
-        <!-- Music -->
-        {% include showcase_grid.html
-        image="assets/Miraheze Banner.png"
-        title="Music"
-        description="Learn more about artists' and their discographies."
-        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=music"
-        %}
-
-        <!-- Sports -->
-        {% include showcase_grid.html
-        image="assets/Miraheze Banner.png"
-        title="Sports"
-        description="Player stats, team histories, and detailed analysis for fans across the globe."
-        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=sports"
-        %}
-
-        <!-- Education -->
-        {% include showcase_grid.html
-        image="assets/Miraheze Banner.png"
-        title="Education"
-        description="Academic research, language learning resources, and community study guides."
-        link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=education"
-        %}
     </div>
 </section>
 
-{% include wave_top.html %}
-<section class="features-section">
+<!-- Why Miraheze Section -->
+<section class="showcase-section section">
+    <div class="playful-blob-container">
+        <div class="playful-blob blob-bevel right"></div>
+    </div>
+    <div class="container-wrapper">
+        <div class="container section-header">
+            <div>
+                <h2 class="section-title">A home for every community</h2>
+                <p class="section-subtitle">
+                    Discover knowledge bases across countless topics, crafted by passionate fans and experts.
+                </p>
+            </div>
+            <div>
+                <a class="btn-page" href="https://communities.miraheze.org" target="_blank"
+                    rel="noopener noreferrer">
+                    View directory
+                </a>
+            </div>
+        </div>
+        <div class="container showcase-grid">
+            <!-- Gaming -->
+            {% include showcase_grid.html
+            image="assets/Miraheze Banner.png"
+            title="Gaming"
+            description="From indie gems to popular games, with a deep catalog of features and strategies."
+            link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=gaming"
+            %}
+
+            <!-- TV Shows -->
+            {% include showcase_grid.html
+            image="assets/Miraheze Banner.png"
+            title="TV Shows"
+            description="Deep dive into lore, character arcs, and episode guides for people's favorite series."
+            link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=fandom"
+            %}
+
+            <!-- Tech -->
+            {% include showcase_grid.html
+            image="assets/Miraheze Banner.png"
+            title="Technology"
+            description="Technical documentation, software guides, and open-source project libraries."
+            link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=electronics"
+            %}
+
+            <!-- Music -->
+            {% include showcase_grid.html
+            image="assets/Miraheze Banner.png"
+            title="Music"
+            description="Learn more about artists' and their discographies."
+            link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=music"
+            %}
+
+            <!-- Sports -->
+            {% include showcase_grid.html
+            image="assets/Miraheze Banner.png"
+            title="Sports"
+            description="Player stats, team histories, and detailed analysis for fans across the globe."
+            link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=sports"
+            %}
+
+            <!-- Education -->
+            {% include showcase_grid.html
+            image="assets/Miraheze Banner.png"
+            title="Education"
+            description="Academic research, language learning resources, and community study guides."
+            link="https://meta.miraheze.org/wiki/Special:WikiDiscover?category=education"
+            %}
+        </div>
+    </div>
+</section>
+
+<section class="pay-section">
     <div class="container section-header">
-        <h2 class="section-title">Powered by the people</h2>
-        <p class="section-subtitle">
+        <p class="section-middle-text">
             Miraheze is a non-profit entity. We are funded entirely by generous donations from users like you, which is
             why we never need to show ads.
         </p>
         <div style="margin: 2rem">
-            <a class="btn-hero-primary" href="https://meta.miraheze.org/wiki/Special:RequestWiki" target="_blank"
+            <a class="btn-page" href="https://meta.miraheze.org/wiki/Special:RequestWiki" target="_blank"
                 rel="noopener noreferrer">
                 <span class="material-symbols-outlined">volunteer_activism</span>
                 Donate today
