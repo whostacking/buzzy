@@ -30,6 +30,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-variation-settings: "ROND" 83;
 }
 
 html {
@@ -188,6 +189,7 @@ img {
     font-weight: 700;
     transition: all 0.2s;
     font-size: 1.25rem;
+    display: inline-block;
 }
 
 /* Hero Section */
@@ -526,6 +528,10 @@ img {
     font-weight: 700;
     color: var(--on-surface);
     margin-bottom: .5rem;
+
+    @media (max-width: 768px) {
+        font-size: 2.25rem!important;
+    }
 }
 
 .section-subtitle {
@@ -566,6 +572,17 @@ img {
     margin-top: 10rem;
     margin-bottom: 10rem;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        margin-top: 5rem!important;
+    }
+}
+
+.pay-section .container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -574,6 +591,11 @@ img {
     font-weight: 600;
     line-height: 1.2;
     max-width: 65vw;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem!important;
+        max-width: unset!important;
+    }
 }
 
 .card {
