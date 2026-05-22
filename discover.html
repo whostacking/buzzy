@@ -12,6 +12,12 @@ body_class: discover
     color: inherit;
 }
 
+@media (max-width: 768px) {
+    .discover-container .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
 .sun {
     position: absolute;
     width: 60%;
@@ -35,6 +41,7 @@ body_class: discover
 .discover-orbiting {
     position: relative;
     width: 600px;
+    max-width: 100vw;
     height: 600px;
     margin: auto;
 }
@@ -74,6 +81,10 @@ body_class: discover
         rotate(calc(var(--angle) * -1));
 
     animation: keep-upright 40s linear infinite;
+
+    @media (max-width: 768px) {
+        --radius: 250px;
+    }
 }
 
 @keyframes orbit-spin {
