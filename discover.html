@@ -5,8 +5,11 @@ body_class: discover
 ---
 
 <style>
-.page-discover .main-header {
-    margin-bottom: 2rem;
+.discover-container .hero-title .text-highlight {
+    border-radius: 3rem;
+    background: var(--primary-dim);
+    padding: 0.25rem 0.75rem;
+    color: inherit;
 }
 
 .sun {
@@ -20,7 +23,6 @@ body_class: discover
     padding: 15px;
 
     z-index: 5;
-    opacity: 0.3;
 
     img {
         width: 100%;
@@ -45,7 +47,6 @@ body_class: discover
     /* border: 2px solid rgba(0,0,0,0.18); */
 
     animation: orbit-spin 40s linear infinite;
-    opacity: 0.15;
 }
 
 .planet {
@@ -113,8 +114,36 @@ body_class: discover
 
 }
 
+@keyframes bloom {
+    0% {
+        transform: translate(-50%, -50%) scale(.5);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes fadeafterpopinintro {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
 .discover-landing {
     display: grid;
+    mask-image: linear-gradient(to bottom, black 80%, transparent);
 
     > * {
         grid-area: 1 / 1;
@@ -123,6 +152,22 @@ body_class: discover
     .discover-orbiting {
         z-index: 0;
         pointer-events: none;
+        animation: fadeafterpopinintro 1s forwards;
+        animation-delay: 2.5s;
+
+        .sun {
+            animation: bloom 2s forwards;
+        }
+
+        .planet {
+            transition: opacity 0.5s ease, translate 0.5s ease;
+            transition-delay: calc(1s + 0.2s + 0.05s * (sibling-index() - 1));
+            
+            @starting-style {
+                opacity: 0;
+                translate: 1em 0;
+            }
+        }
     }
 
     .discover-container {
@@ -132,6 +177,13 @@ body_class: discover
         justify-content: center;
         align-items: center;
         text-align: center;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        transition-delay: 2.75s;
+        
+        @starting-style {
+            opacity: 0;
+        }
     }
 }
 </style>
@@ -204,3 +256,155 @@ body_class: discover
             </p>
     </div>
 </section>
+
+<section class="tabber-section section">
+    <h1 class="section-title">See our curated list</h1>
+	<div class="container tabber-container">
+		<ul class="tabnav">
+			<li><a href="#tab1">Gaming</a></li>
+			<li><a href="#tab2">Entertainment</a></li>
+		</ul>
+		<div class="tabcontent-wrapper">
+			<div class="tabcontent" id="tab1">
+				<div class="container showcase-grid">
+                    {% include wiki_discover_grid.html
+                    title="Rain World Wiki"
+                    image="assets/Miraheze Banner.png"
+                    description="Rain World Wiki is a Miraheze wiki on survival platformer Rain World."
+                    link="https://rainworld.miraheze.org/"
+                    %}
+
+                    {% include wiki_discover_grid.html
+                    image="assets/Miraheze Banner.png"
+                    title="Baldi's Basics Wiki"
+                    description="Baldi's Basics Wiki is a Miraheze wiki about the video game Baldi's Basics in Education and Learning."
+                    link="https://baldisbasics.miraheze.org/"
+                    %}
+
+                    {% include wiki_discover_grid.html
+                    image="assets/Miraheze Banner.png"
+                    title="Pizza Tower Wiki"
+                    description="Pizza Tower Wiki is a Miraheze wiki on video game Pizza Tower."
+                    link="https://pizzatower.wiki/"
+                    %}
+
+                    {% include wiki_discover_grid.html
+                    image="assets/Miraheze Banner.png"
+                    title="Poupedia"
+                    description="Poupedia covers Pou, a mobile virtual pet game."
+                    link="https://poupedia.com/Poupedia"
+                    %}
+
+                    {% include wiki_discover_grid.html
+                    image="assets/Miraheze Banner.png"
+                    title="Lethal Company Wiki"
+                    description="Community wiki for Lethal Company, an indie game made by Zeekerss."
+                    link="https://lethal.miraheze.org/"
+                    %}
+
+                    {% include wiki_discover_grid.html
+                    image="assets/Miraheze Banner.png"
+                    title="Nikki UP2U Wiki"
+                    description="Nikki UP2U Wiki is a Miraheze wiki on the 2012 mobile game Nikki UP2U: A dressing story, the first in the Nikki series of games."
+                    link="https://nikki1.wiki"
+                    %}
+                </div>
+			</div>
+			<div class="tabcontent" id="tab2">
+				<h2>Why do we use it?</h2>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+    // 1. Initial State: Set first tab to active and show first content block
+    const firstTabLink = document.querySelector('ul.tabnav li:first-child a');
+    const firstContent = document.querySelector('.tabcontent');
+
+    if (firstTabLink) firstTabLink.classList.add('active');
+    if (firstContent) firstContent.style.display = 'block';
+
+    // 2. Event Delegation: Listen for clicks on the parent <ul>
+    document.querySelector('ul.tabnav').addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        e.preventDefault(); // Equivalent to 'return false'
+
+        const targetId = link.getAttribute('href');
+        const targetContent = document.querySelector(targetId);
+
+        // Update Tabs: Remove active from others, add to clicked
+        document.querySelectorAll('ul.tabnav li a').forEach(el => {
+            el.classList.remove('active');
+        });
+        link.classList.add('active');
+
+        // Update Content: Hide all, show target
+        document.querySelectorAll('.tabcontent').forEach(content => {
+            content.style.display = 'none';
+        });
+        if (targetContent) targetContent.style.display = 'block';
+    });
+</script>
+
+<style>
+    /* Tabber Section */
+    .tabber-section {
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        > h1 {
+            text-align: center;
+        }
+    }
+
+    /* Tabber Navigation */
+    ul.tabnav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        list-style: none;
+    }
+
+    ul.tabnav li {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    ul.tabnav li a {
+        display: block;
+        color: #333333;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 3rem;
+        background-color: #f6f6f6;
+        transition: .25s background, .25s font-weight;
+    }
+
+    ul.tabnav li a:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    ul.tabnav li a.active {
+        font-weight: bold;
+        background-color: var(--primary-dim);
+    }
+
+    /* Tabber Content */
+    .tabcontent-wrapper {
+        margin-top: 2rem;
+    }
+
+    .tabcontent {
+        display: none;
+    }
+</style>
