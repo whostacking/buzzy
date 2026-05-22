@@ -30,6 +30,12 @@
     font-variation-settings: "ROND" 90;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+    }
+}
+
 ::selection {
     background-color: var(--primary-selection);
 }
@@ -604,7 +610,7 @@ img {
     }
 
     &.discover-card .card-body {
-        padding: 2rem!important;
+        padding: 2rem !important;
     }
 
     .card-title-row {
@@ -643,7 +649,7 @@ img {
         height: 100%;
         object-fit: cover;
         transition: transform 0.5s;
-    } 
+    }
 
     &:hover .card-image {
         transform: scale(1.1);

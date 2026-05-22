@@ -131,16 +131,6 @@ body_class: discover
     }
 }
 
-@keyframes fadeafterpopinintro {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.3;
-    }
-}
-
 .discover-landing {
     display: grid;
     mask-image: linear-gradient(to bottom, black 80%, transparent);
@@ -152,8 +142,9 @@ body_class: discover
     .discover-orbiting {
         z-index: 0;
         pointer-events: none;
-        animation: fadeafterpopinintro 1s forwards;
-        animation-delay: 2.5s;
+        opacity: 0.2;
+        transition: opacity 1s;
+        transition-delay: 2.75s;
 
         .sun {
             animation: bloom 2s forwards;
@@ -167,6 +158,10 @@ body_class: discover
                 opacity: 0;
                 translate: 1em 0;
             }
+        }
+
+        @starting-style {
+            opacity: 1;
         }
     }
 
@@ -319,30 +314,26 @@ body_class: discover
 </section>
 
 <script>
-    // 1. Initial State: Set first tab to active and show first content block
     const firstTabLink = document.querySelector('ul.tabnav li:first-child a');
     const firstContent = document.querySelector('.tabcontent');
 
     if (firstTabLink) firstTabLink.classList.add('active');
     if (firstContent) firstContent.style.display = 'block';
 
-    // 2. Event Delegation: Listen for clicks on the parent <ul>
     document.querySelector('ul.tabnav').addEventListener('click', function(e) {
         const link = e.target.closest('a');
         if (!link) return;
 
-        e.preventDefault(); // Equivalent to 'return false'
+        e.preventDefault();
 
         const targetId = link.getAttribute('href');
         const targetContent = document.querySelector(targetId);
 
-        // Update Tabs: Remove active from others, add to clicked
         document.querySelectorAll('ul.tabnav li a').forEach(el => {
             el.classList.remove('active');
         });
         link.classList.add('active');
 
-        // Update Content: Hide all, show target
         document.querySelectorAll('.tabcontent').forEach(content => {
             content.style.display = 'none';
         });
