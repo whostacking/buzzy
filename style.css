@@ -611,6 +611,10 @@ img {
 
     &.discover-card .card-body {
         padding: 2rem !important;
+
+        @media (max-width: 768px) {
+            padding: 1rem !important;
+        }
     }
 
     .card-title-row {
@@ -642,6 +646,10 @@ img {
     .card-image-wrapper {
         height: 12rem;
         overflow: hidden;
+
+        @media (max-width: 768px) {
+            height: 8rem;
+        }
     }
 
     .card-image {

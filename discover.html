@@ -44,6 +44,7 @@ body_class: discover
     max-width: 100vw;
     height: 600px;
     margin: auto;
+    overflow: hidden;
 }
 
 .orbit {
@@ -184,11 +185,13 @@ body_class: discover
         align-items: center;
         text-align: center;
         opacity: 1;
-        transition: opacity 0.5s ease;
+        content-visibility: visible;
+        transition: opacity 0.5s, content-visibility 0.5s;
         transition-delay: 2.75s;
         
         @starting-style {
             opacity: 0;
+            content-visibility: hidden;
         }
     }
 }
