@@ -897,7 +897,7 @@ img {
     margin-top: 1rem;
 }
 
-.social-btn {
+.main-footer .social-btn {
     width: 2rem;
     height: 2rem;
     border-radius: var(--radius-full);
@@ -926,7 +926,7 @@ img {
 
     &.twitter,
     &.github {
-        background-color: #181717;
+        background-color: #2d2b2b;
     }
 
     &.discord {

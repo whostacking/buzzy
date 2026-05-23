@@ -36,7 +36,8 @@ layout: default
             <div class="hero-bg-glow"></div>
             <div class="hero-image-container">
                 <a href="https://fischipedia.org" target="_blank" rel="noopener noreferrer">
-                    <img class="hero-image" alt="Screenshot of Fischipedia" src="assets/fischipedia.org_wiki_Fisch_Wiki.png" />
+                    <img class="hero-image" alt="Screenshot of Fischipedia"
+                        src="assets/fischipedia.org_wiki_Fisch_Wiki.png" />
                 </a>
             </div>
         </div>
@@ -66,7 +67,8 @@ layout: default
             {% include feature_card.html
             icon="settings_suggest"
             title="Configure it freely"
-            description="Our self-service interface allows administrators to easily configure almost every aspect of their
+            description="Our self-service interface allows administrators to easily configure almost every aspect of
+            their
             wiki."
             %}
 
@@ -74,14 +76,16 @@ layout: default
             {% include feature_card.html
             icon="palette"
             title="Customizability"
-            description="Make it feel like home. Choose and configure over 300 extensions and skins to your hearts content."
+            description="Make it feel like home. Choose and configure over 300 extensions and skins to your hearts
+            content."
             %}
 
             <!-- Custom domains -->
             {% include feature_card.html
             icon="language"
             title="Custom domains"
-            description="Express yourself! All wikis can choose to use a custom domain of their own if they wish, for free."
+            description="Express yourself! All wikis can choose to use a custom domain of their own if they wish, for
+            free."
             %}
 
             <!-- Friendly support -->
@@ -115,8 +119,7 @@ layout: default
                 </p>
             </div>
             <div>
-                <a class="btn-page" href="https://communities.miraheze.org" target="_blank"
-                    rel="noopener noreferrer">
+                <a class="btn-page" href="https://communities.miraheze.org" target="_blank" rel="noopener noreferrer">
                     View directory
                 </a>
             </div>
@@ -188,3 +191,133 @@ layout: default
         </div>
     </div>
 </section>
+
+<section class="beehive-section">
+    <div class="container section-header">
+        <h1 class="section-title">
+            Join the beehive
+        </h1>
+
+        <div class="hex-grid">
+            <a class="social-btn mastodon top" href="https://mastodon.social/@miraheze" title="Mastodon">
+                <div class="top">
+                    <img src="assets/mastodon.svg" height="200" alt="" aria-hidden="true" class="social-icon" />
+                </div>
+            </a>
+            <a class="social-btn bluesky left" href="https://bsky.app/profile/miraheze.org" title="Bluesky">
+                <div class="left">
+                    <img src="assets/bluesky.svg" height="15" alt="" aria-hidden="true" class="social-icon" />
+                </div>
+            </a>
+            <div class="center"></div>
+            <a class="social-btn facebook leftbottom" href="https://facebook.com/Miraheze" title="Facebook">
+                <div class="leftbottom">
+                    <img src="assets/facebook.svg" height="15" alt="" aria-hidden="true" class="social-icon" />
+                </div>
+            </a>
+            <a class="social-btn twitter bottom" href="https://twitter.com/miraheze" title="X (formerly Twitter)">
+                <div class="bottom">
+                    <img src="assets/x.svg" height="15" alt="" aria-hidden="true" class="social-icon" />
+                </div>
+            </a>
+            <a class="social-btn github rightbottom" href="https://github.com/miraheze" title="GitHub">
+                <div class="rightbottom">
+                    <img src="assets/github.svg" height="15" alt="" aria-hidden="true" class="social-icon" />
+                </div>
+            </a>
+            <a class="social-btn discord right" href="https://miraheze.org/discord" title="Discord">
+                <div class="right">
+                    <img src="assets/discord.svg" height="15" alt="" aria-hidden="true" class="social-icon" />
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hex-grid {
+        --mirawidth: 150px;
+        --mirawidthspacing: 20px;
+        width: max-content;
+        margin: 2rem auto;
+        padding-right: var(--mirawidthspacing);
+        display: grid;
+        grid-template-columns: repeat(3, var(--mirawidth));
+        grid-template-rows: repeat(6, auto);
+        gap: var(--mirawidthspacing) 0;
+        grid-auto-flow: row;
+        grid-template-areas:
+            ". top ."
+            "left top right"
+            "left center right"
+            "leftbottom center rightbottom"
+            "leftbottom bottom rightbottom"
+            ". bottom .";
+
+        > * {
+            width: calc(var(--mirawidth) + var(--mirawidthspacing));
+            height: var(--mirawidth);
+            clip-path: polygon(25% 0%,
+                    75% 0%,
+                    100% 50%,
+                    75% 100%,
+                    25% 100%,
+                    0% 50%);
+            transition: all 0.3s;
+
+            &:not(.center) {
+                background-color: var(--color-link);
+            }
+
+            img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: contain;
+                padding: 2rem;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        > a > div {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            --mirawidth: 100px;
+            --mirawidthspacing: 15px;
+        }
+    }
+
+    .top {
+        grid-area: top;
+    }
+
+    .left {
+        grid-area: left;
+    }
+
+    .center {
+        grid-area: center;
+        background-color: #8e7650;
+    }
+
+    .leftbottom {
+        grid-area: leftbottom;
+    }
+
+    .bottom {
+        grid-area: bottom;
+    }
+
+    .rightbottom {
+        grid-area: rightbottom;
+    }
+
+    .right {
+        grid-area: right;
+    }
+</style>
