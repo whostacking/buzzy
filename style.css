@@ -130,6 +130,10 @@ img {
     position: sticky;
     top: 0;
     z-index: 50;
+
+    @media (max-width: 768px) {
+        position: static!important;
+    }
 }
 
 .main-nav {
@@ -304,6 +308,12 @@ img {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     letter-spacing: -0.025em;
+
+    @media (max-width: 768px) {
+        > br {
+            display: none!important;
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -647,7 +657,7 @@ img {
         padding: 2rem !important;
 
         @media (max-width: 768px) {
-            padding: 1rem !important;
+            padding: 2.5rem !important;
         }
     }
 
